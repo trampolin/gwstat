@@ -13,33 +13,36 @@ if (isset($login)) {
 		if ($db->get_last_num_rows() > 0)
 		{ ?>
 		<div class="contentitem round">
-		<p>Gesamt Farmertr&auml;ge pro Tag</p>
-		<table class="auswertung">
-		<tr>
-			<th>Datum</th>
-			<th>Anzahl</th>
-			<th>Eisen</th>
-			<th>Silizium</th>
-			<th>Wasser</th>
-			<th>Wasserstoff</th>
-		</tr>
-		<?php
-			while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
-			{
-				?>
-
+			<p>Gesamt Farmertr&auml;ge pro Tag <a href="#" id="togglefarmperday">anzeigen</a></p>
+			<div id="farmperday" class="hidden">
+				<table class="auswertung">
 				<tr>
-				<?php
-				foreach($row as $key => $value)
-				{
-					?><td><?php echo $value; ?></td><?php
-				}
-				?>
+					<th>Datum</th>
+					<th>Anzahl</th>
+					<th>Eisen</th>
+					<th>Silizium</th>
+					<th>Wasser</th>
+					<th>Wasserstoff</th>
 				</tr>
 				<?php
-			}
-			?>
-			</table><p>Nach oben</p></div>
+					while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 
+					{
+						?>
+
+						<tr>
+						<?php
+						foreach($row as $key => $value)
+						{
+							?><td><?php echo $value; ?></td><?php
+						}
+						?>
+						</tr>
+						<?php
+					}
+					?>
+					</table>
+			</div>
+		</div>
 			<?php
 		}
 		
@@ -50,7 +53,8 @@ if (isset($login)) {
 		if ($db->get_last_num_rows() > 0)
 		{ ?>
 		<div class="contentitem round">
-		<p>Gesamt Farmertr&auml;ge pro eigenem Planet</p>
+		<p>Gesamt Farmertr&auml;ge pro eigenem Planet <a href="#" id="togglefarmperownplanet">anzeigen</a></p>
+		<div id="farmperownplanet" class="hidden">
 		<table class="auswertung">
 		<tr>
 			<th>Planet</th>
@@ -76,7 +80,7 @@ if (isset($login)) {
 				<?php
 			}
 			?>
-			</table><p>Nach oben</p></div>
+			</table></div></div>
 			<?php
 		}
 		
@@ -87,7 +91,8 @@ if (isset($login)) {
 		if ($db->get_last_num_rows() > 0)
 		{ ?>
 		<div class="contentitem round">
-		<p>Gesamt Farmertr&auml;ge pro Farm</p>
+		<p>Gesamt Farmertr&auml;ge pro Farm <a href="#" id="togglefarmperplanet">anzeigen</a></p>
+		<div id="farmperplanet" class="hidden">
 		<table class="auswertung">
 		<tr>
 			<th>Farm</th>
@@ -113,7 +118,15 @@ if (isset($login)) {
 				<?php
 			}
 		?>
-		</table><p>Nach oben</p></div>
+		</table></div></div>
+		
+			<script type="text/javascript">
+			$(function() {
+				makeToggleAble('togglefarmperday','farmperday');
+				makeToggleAble('togglefarmperownplanet','farmperownplanet');
+				makeToggleAble('togglefarmperplanet','farmperplanet');
+			});
+			</script>
 		<?php
 		
 		}

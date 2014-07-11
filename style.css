@@ -64,12 +64,18 @@ body {
 	text-align: center;
 }
 
+.hidden {
+	display: none;
+}
+
 .auswertung {
 	border-spacing: 0px;
 	border-collapse: collapse;
 	margin: auto;
 	border: 1px solid black;
 	width: 880px;
+	margin-bottom: 20px;
+	/*display: none;*/
 }
 
 .auswertung tr

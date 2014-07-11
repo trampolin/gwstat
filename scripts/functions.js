@@ -34,6 +34,13 @@ $(function() {
   });
 });
 
+function makeToggleAble(linkid,divid) {
+	$('#'+linkid).click(function() {
+		$('#'+divid).slideToggle();
+		$(this).text($(this).text() == 'anzeigen' ? 'verstecken' : 'anzeigen');
+	});
+}
+
 function showNotification(aMessage,aTheme) {
 	$.jGrowl(aMessage, {theme: aTheme});
 }
