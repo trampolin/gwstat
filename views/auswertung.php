@@ -11,7 +11,7 @@
 	if ($db->get_last_num_rows() > 0)
 	{ ?>
 	<p>Gesamt Farmertr&auml;ge pro Tag</p>
-	<table border="1px" width="800px">
+	<table class="auswertung">
 	<tr>
 		<th>Datum</th>
 		<th>Anzahl</th>
@@ -47,7 +47,7 @@
 	if ($db->get_last_num_rows() > 0)
 	{ ?>
 	<p>Gesamt Farmertr&auml;ge pro eigenem Planet</p>
-	<table border="1px" width="800px">
+	<table class="auswertung">
 	<tr>
 		<th>Planet</th>
 		<th>Anzahl</th>
@@ -83,7 +83,7 @@
 	if ($db->get_last_num_rows() > 0)
 	{ ?>
 	<p>Gesamt Farmertr&auml;ge pro Farm</p>
-	<table border="1px" width="800px">
+	<table class="auswertung">
 	<tr>
 		<th>Farm</th>
 		<th>Anzahl</th>

@@ -1,0 +1,143 @@
+body {
+	background-color: #F8F8F8;
+}
+
+.round {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.fullwidth {
+	width: 980px;
+	margin: auto;
+}
+
+.innerfull {
+	width: 960px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#everything {
+	border: 1px solid #ccc;
+	background-color: #FFF;
+}
+
+#header {
+	background-image: url("images/guitar.png");
+	height: 128px;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 1px solid #ccc;
+}
+
+#navigation {
+	min-height: 64px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	text-align: center;
+}
+
+.navigationitem {
+	width: 138px;
+	height: 48Px;
+	line-height: 48px;
+	border: 1px solid #ccc;
+	float: left;
+	margin: 10px;
+}
+
+.navigationitem:hover {
+	background-color: #eee;
+	cursor: pointer;
+}
+
+#content {
+	min-height: 500px;
+	border: 1px solid #ccc;
+}
+
+#content p {
+	text-align: center;
+}
+
+.auswertung {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	margin: auto;
+	border: 1px solid black;
+	width: 880px;
+}
+
+.auswertung tr:nth-child(2n)
+{
+	background-color: #F0FdFd;
+}
+
+.auswertung td
+{
+	border: 1px solid black;
+}
+
+.auswertung th
+{
+	border: 1px solid black;
+}
+
+#login {
+	text-align: center;
+}
+
+.contentitem {
+	width: 940px;
+	min-height: 64Px;
+	border: 1px solid #ccc;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #eeffee;
+	overflow: hidden;
+	text-align: center;
+	
+/*position:relative; display:block; background:#0ac; border-left:800px solid white; border-right:140px solid white; overflow:visible;*/
+}
+
+.bigfont {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#footer {
+	min-height: 64px;
+	border: 1px solid #ccc;
+}
+
+#throbber {
+	width: 64px;
+	height: 64px;
+}
+
+#loading {
+	display: none;
+	width: 64px;
+	height: 64px;
+	background-image: url("images/throbber.png");
+}
+
+div.jGrowl div.good {
+	background-color: 		#ccffcc;
+	color: 							navy;
+}
+
+div.jGrowl div.bad {
+	background-color: 		#FFcccc;
+	color: 							navy;
+}
+
+div.jGrowl div.debug {
+	background-color: 		#FFbb88;
+	color: 							navy;
+}
