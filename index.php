@@ -18,7 +18,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
-<link rel="shortcut icon" type="image/x-icon" href="images/guitar.ico">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="jquery.jgrowl.css">
 <title>GW STATS</title>
@@ -34,8 +34,8 @@
 		<?php 
 			if ($login->isUserLoggedIn() == true) { ?>
 				<div id="navigation" class="round innerfull bigfont">
-					<a href="?action=auswertung"><div class="navigationitem round" id="navigetbands">Alles</div></a>
 					<a href="?action=farmen"><div class="navigationitem round" id="navigetvenues">Farmen</div></a>
+					<a href="?action=auswertung"><div class="navigationitem round" id="navigetbands">Alles</div></a>
 				</div>
 		<?php } ?>
 		<div id="content" class="round innerfull">
@@ -50,7 +50,7 @@
 									include("views/farmen.php");
 									break;
 								case null:
-									include("views/auswertung.php");
+									include("views/farmen.php");
 									?>
 										<script type="text/javascript">
 											showNotification('Logged in','good');

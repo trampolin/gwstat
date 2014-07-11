@@ -1,6 +1,6 @@
 <?php
 
-require_once("./config/db.php");
+require_once(ROOT_DIR."/config/db.php");
 
 class DatabaseConnection {
 	private $dblink;
