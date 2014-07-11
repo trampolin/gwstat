@@ -5,8 +5,8 @@
 <form name="farmen" action="" method="post">
 
                   <p>Text von der Nachrichtenseite</p>
-									<p><textarea name="msg" id="msg" rows="20" cols="100"></textarea></p>
-									<p><input type="submit" name="send" class="button" value="Nachrichten auswerten"></p>
+									<p><textarea name="msg" id="msg_farms" rows="20" cols="100"></textarea></p>
+									<p><input type="submit" name="send" class="button" id="submit_farms" value="Nachrichten auswerten"></p>
 
  </form>
  </div>

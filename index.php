@@ -34,8 +34,9 @@
 		<?php 
 			if ($login->isUserLoggedIn() == true) { ?>
 				<div id="navigation" class="round innerfull bigfont">
-					<a href="?action=farmen"><div class="navigationitem round" id="navigetvenues">Farmen</div></a>
-					<a href="?action=auswertung"><div class="navigationitem round" id="navigetbands">Alles</div></a>
+					<a href="?action=farmen"><div class="navigationitem round">Farmen</div></a>
+					<a href="?action=auswertung"><div class="navigationitem round">Alles</div></a>
+					<a href="?action=highscore"><div class="navigationitem round">Highscore</div></a>
 				</div>
 		<?php } ?>
 		<div id="content" class="round innerfull">
@@ -48,6 +49,9 @@
 									break;
 								case "farmen":
 									include("views/farmen.php");
+									break;
+								case "highscore":
+									include("views/highscore.php");
 									break;
 								case null:
 									include("views/farmen.php");

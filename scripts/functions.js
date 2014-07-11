@@ -1,6 +1,6 @@
 $(function() {
-  $(".button").click(function() {
-		var message = $("#msg").val();
+  $("#submit_farms").click(function() {
+		var message = $("#msg_farms").val();
 		
 		$.ajax({
 			type: "POST",
@@ -9,7 +9,25 @@ $(function() {
 			success: function(data) {
 				showNotification(data,'good');
 				$("#farmergebnis").html('<p>Ergebnis</p>'+data);
-				$('#msg').val("");
+				$('#msg_farms').val("");
+			}
+		});
+		return false;
+  });
+});
+
+$(function() {
+  $("#submit_highscore").click(function() {
+		var message = $("#msg_highscore").val();
+		
+		$.ajax({
+			type: "POST",
+			url: "bin/process_highscore.php",
+			data: { msg: message, password: 'supergeil'},
+			success: function(data) {
+				showNotification(data,'good');
+				$("#highscoreergebnis").html('<p>Ergebnis</p>'+data);
+				$('#msg_highscore').val("");
 			}
 		});
 		return false;
