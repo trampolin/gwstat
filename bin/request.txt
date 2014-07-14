@@ -1,0 +1,1702 @@
+<html>
+    <head>
+        <title>GigraWars</title>
+        <meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />
+        <meta name=\"description\" content=\"GigraWars.de ist eine Weltraum Simulation gepaart mit einem Echtzeit-Strategiespiel in welchem sich tausende Spieler gleichzeig gegenÃ¼ber stehen. Ziel ist es in der Highscore immer weiter nach oben auf zu steigen und das Universum zu Beherrschen, zu handeln und zu regieren. SchlieÃŸe BÃ¼ndnisse oder FÃ¼hre Krieg. Werde ein Teil von GigraWars !\" />
+        <meta name=\"keywords\" content=\"GigraWars, Galaxywars, gw03, gw05, space4k, gw, xnova, x-Nova, Weltraumsimulation, Browsergame, online, kostenlos, legendÃ¤r, MMOG, Science fiction, Weltraum, Raumschiff\">
+        <meta name=\"robots\" content=\"index,follow\" />
+        <meta name=\"Revisit\" content=\"After 5 days\" />
+        <meta name=\"language\" content=\"de\" />
+        <meta name=\"author\" content=\"scrippi, kadoc\" />
+        <meta name=\"publisher\" content=\"stytex.de\" />
+        <meta name=\"copyright\" content=\"stytex.de\" />
+        <link rel=\"icon\" href=\"design/gw/favicon.png\" type=\"image/x-icon\" />
+        <style>
+            body{margin:0;padding:0;width:100%;height:100%;}
+        </style>
+    </head>
+    <body>
+        <iframe src=\"index.php\" style=\"height:100%;width:100%;border:0;\" noresize frameborder=0 height=\"100%\" width=\"100%\"></iframe>
+    </body>
+</html><!doctype html>
+<html lang=\"de\">
+<head>
+
+<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\" />
+<meta name=\"description\" content=\"GigraWars.de ist eine Weltraum Simulation gepaart mit einem Echtzeit-Strategiespiel in welchem sich tausende Spieler gleichzeig gegenÃ¼ber stehen. Ziel ist es in der Highscore immer weiter nach oben auf zu steigen und das Universum zu Beherrschen, zu handeln und zu regieren. SchlieÃŸe BÃ¼ndnisse oder FÃ¼hre Krieg. Werde ein Teil von GigraWars !\" />
+<meta name=\"keywords\" content=\"GigraWars, Galaxywars, gw03, gw05, space4k, gw, xnova, x-Nova, Weltraumsimulation, Browsergame, online, kostenlos, legendÃ¤r, MMOG, Science fiction, Weltraum, Raumschiff\" />
+<meta name=\"robots\" content=\"index,follow\" />
+<meta name=\"Revisit\" content=\"After 5 days\" />
+<meta name=\"language\" content=\"de\" />
+<meta name=\"author\" content=\"scrippi, kadoc\" />
+<meta name=\"publisher\" content=\"stytex.de\" />
+<meta name=\"copyright\" content=\"stytex.de\" />
+<link rel=\"icon\" href=\"http://uni1.gigrawars.de/design/gw/favicon.png\" type=\"image/x-icon\" />
+
+
+<meta name=â€pinterestâ€ content=â€nopinâ€ />
+
+	<title>GigraWars -  1. Universum</title>
+    <script type=\"text/javascript\" src=\"http://uni1.gigrawars.de/js/all_in_one.js.php?a=4&c=707\"></script>
+    
+	
+    
+    <script type=\"text/javascript\">
+    giServerTime = 1405346650000;
+    giLocalTime = new Date().getTime();
+    inChat = false;
+    
+    function getServerTime()
+    {
+        //diff
+        var liDiff = new Date().getTime() - giLocalTime;
+        
+        return giServerTime + liDiff;
+    }
+    </script>
+    <!-- <script src=\"ticker.js\" type=\"text/javascript\"></script> -->
+<!--[if gte IE 9]>
+  <style type=\"text/css\">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"http://uni1.gigrawars.de/design/gw.css?cache=10\" />
+    
+
+		<script type=\"text/javascript\">
+        maxGal = 300;
+        maxSys = 300;
+        confSpeedFl = 1;
+        userFlugzeitBonus = 0;
+		</script>
+	<!-- End JavaScript Slider -->
+    
+
+
+</head>
+<body class=\"gecko\">
+<div id=\"helper\" style=\"display:none;background:#fff;padding:10px 20px;-moz-box-shadow:0 0 10px #3976a4;-webkit-box-shadow:0 0 10px #3976a4;box-shadow:0 0 10px #3976a4;z-index:999999;position:absolute;-webkit-border-radius:5px;-moz-border-radius:5px;\">
+    <div class=\"sfOverlayClose\">
+    </div>
+    <div id=\"html\" style=\"margin-top:3px;color:black;\"></div></div>
+<div id=\"wrapper\">
+</div><center>
+    <div style=\"margin:0 225px;\">
+        
+ <div class=\"reshead\">
+    <table>
+        <tr style=\"cursor:default;color:rgba(255,255,255,.5);font-size:10px\">
+            <td>
+                <h3 id=\"resbar1\">2.970.877</h3>
+                <b>Eisen</b><span class=\"prod\"><i>+</i>13506/h</span>
+            </td>
+            <td>
+                <h3 id=\"resbar2\">3.435.223</h3>
+                <b>Silizium</b><span class=\"prod\"><i>+</i>17805/h</span>
+            </td>
+            <td>
+                <h3 id=\"resbar3\">3.653.456</h3>
+                <b>Wasser</b><span class=\"prod\"><i>+</i>170/h</span>            </td>
+            <td>
+                <h3 id=\"resbar4\">327.042</h3>
+                <b>Wasserstoff</b><span class=\"prod\"><i>+</i>2232/h</span>
+            </td>
+        </tr>
+    </table>
+</div>
+   
+    
+    </div>
+</center>
+<script type=\"text/javascript\">
+//Rohstoffe
+//initrestime = 1405346650;
+initrestime = (new Date().getTime() / 1000 );
+res1 = 2970876.8327508;
+res2 = 3435223.1000409;
+res3 = 3653455.6805352;
+res4 = 327042.3627766;
+
+//produktion
+prod1 = 13506;
+prod2 = 17805;
+prod3 = 170;
+prod4 = 2232;
+
+//kapa
+kapa1 = 12150000;
+kapa2 = 14670000;
+kapa3 = 5220000;
+kapa4 = 9870000;
+
+setInterval(reloadRes,1000);
+
+</script>
+<div id=\"main-wrapper\">
+<center>
+
+
+<script type=\"text/javascript\">
+    function ecp(direction) {
+        var e = $(\'#xnav .nav_body .coords select option\');
+        var first = e[0].value;
+        var last  = e[(e.length -1)].value;
+        var curr  = $(\'#xnav .nav_body .coords select option:selected\')[0].value;
+        if(direction==0){
+            // runter
+            if(curr == first) {
+                return last;
+            }
+            return $(\'#xnav .nav_body .coords select option:selected\').prev()[0].value;
+        } else {
+            if(curr == last) {
+                return first;
+            } else {
+                return $(\'#xnav .nav_body .coords select option:selected\').next()[0].value
+            }
+        }
+        
+    }
+</script>
+<div id=\"xnav\" style=\"position:absolute;width:160px;height:100%;left:0;top:0;\">
+    <div class=\"nav_body\">
+        
+        <a href=\"uebersicht.php\">&Uuml;bersicht</a>
+        <a href=\"konstruktion.php\">Konstruktion</a>
+        <a href=\"schiffe.php\">Produktion</a>
+        <a href=\"forschung.php?u=\">Forschung</a>
+        <a href=\"verteidigung.php\">Verteidigung</a>
+        <a href=\"planeten.php\">Planeten</a>
+        <a href=\"technik.php\">Technik</a>
+        <!--<a href=\"targetliste.php\">Targetliste</a>-->
+        <div class=\"coords\"><select style=\"margin-top:-2px;\" onchange=\"top.location=\'?change=\'+this.value;\"><option value=\"105:164:3:1\">105:164:3</option><option value=\"106:162:3:1\">106:162:3</option><option value=\"107:140:7:1\">107:140:7</option><option value=\"108:201:1:1\">108:201:1</option><option value=\"108:201:2:1\" selected style=\"color:gold;\">108:201:2</option><option value=\"108:201:3:1\">108:201:3</option><option value=\"108:245:6:1\">108:245:6</option><option value=\"109:140:7:1\">109:140:7</option><option value=\"112:201:1:1\">112:201:1</option><option value=\"112:201:2:1\">112:201:2</option><option value=\"112:201:3:1\">112:201:3</option><option value=\"112:201:4:1\">112:201:4</option><option value=\"112:201:5:1\">112:201:5</option></select>                <p style=\"position: absolute; text-shadow:0 1px 1px #000; white-space: nowrap; width: 144px; color: #fff; font-size: 25px; margin: -5px 0px 0px;\">
+    <b style=\"display: inline; cursor:pointer;\" onmousedown=\"top.location=\'?change=\'+ecp(0);\">Â«</b> 
+    <b style=\"display: inline; cursor:pointer;\" onmousedown=\"top.location=\'?change=\'+ecp(1);\">Â»</b>
+  </p>
+                </div>
+        <div style=\"height:15px;\">&nbsp;</div>
+        <a href=\"msg.php?u=\">Nachrichten</a>
+        <a href=\"rohstoffe.php\">Rohstoffe</a>
+        <a href=\"galaxie.php\">Galaxie</a>
+        <a href=\"highscore.php\">Highscore</a>
+                <a href=\"flotten.php\">Flotten</a>
+        <a href=\"allianzen.php\">Allianz</a>
+        <a href=\"suche.php\" style=\"font-weight:bold!important;\">Suche</a>
+        <!--<div style=\"height:19px;\">&nbsp;</div>-->
+        <a href=\"http://board.gigrawars.de\" target=\"_blank\">Forum</a>
+        <a href=\"einst.php\">Einstellungen</a>
+                <div style=\"height:19px;\">&nbsp;</div>
+                <div style=\"height:19px;\">&nbsp;</div>        <a href=\"logout.php?u=\" target=\"_top\">Ausloggen</a>
+        
+                <a href=\"changelog.php\" style=\"color:silver;font-size:11px;\">V: 1.707</a>
+        <br /><br /><br />
+        <a href=\"http://board.gigrawars.de/index.php?page=TicketList\" target=\"_new\" style=\"color:maroon;font-weight:bold!important;\">Support System</a>
+        <a href=\"premium.php\" style=\"font-size:1.1em;color:yellow;font-weight:bold!important;\">Premium!</a>
+        <a href=\"http://www.webgamers.de/index.php?page=LinkListLink&amp;linkID=237\" target=\"_blank\"><img src=\"http://www.webgamers.de/bilder/vote2\" alt=\"\" /></a>
+                
+    </div>
+    <div style=\"clear:both;\"></div>
+    <div>
+        
+    </div>
+</div>
+<div style=\"clear:both;\"></div>
+
+
+<input type=\"hidden\" id=\"chatUserID\" value=\"Don\">
+
+<div id=\"content\">
+<center> 
+            <form action=\"highscore.php\" method=post>
+                    <select name=\"s\" size=\"1\">
+                        <option value=\"u\" selected>Spieler</option>
+                        
+                        <option value=\"p\" >Planeten</option>
+                        <option value=\"pd\" >Planeten Durchschnitt</option>
+                        
+                        
+                        <option value=\"f\" >Punkte<br/> Forschung</option>
+                        <option value=\"a\" >Allianzen</option>
+                        
+                        
+                    </select>
+
+                    <select name=\"a\" size=1>
+                                            <option value=\"1\" selected>1 - 100</option>
+                                            <option value=\"101\" >101 - 200</option>
+                                            <option value=\"201\" >201 - 300</option>
+                                            <option value=\"301\" >301 - 400</option>
+                                            <option value=\"401\" >401 - 500</option>
+                                            <option value=\"501\" >501 - 600</option>
+                                            <option value=\"601\" >601 - 700</option>
+                                            <option value=\"701\" >701 - 800</option>
+                                            <option value=\"801\" >801 - 900</option>
+                                            <option value=\"901\" >901 - 1000</option>
+                                            <option value=\"1001\" >1001 - 1100</option>
+                                            <option value=\"1101\" >1101 - 1200</option>
+                                            <option value=\"1201\" >1201 - 1300</option>
+                                            <option value=\"1301\" >1301 - 1400</option>
+                                            <option value=\"1401\" >1401 - 1500</option>
+                                            <option value=\"1501\" >1501 - 1600</option>
+                                            <option value=\"1601\" >1601 - 1700</option>
+                                            <option value=\"1701\" >1701 - 1800</option>
+                                            <option value=\"1801\" >1801 - 1900</option>
+                                            <option value=\"1901\" >1901 - 2000</option>
+                                            <option value=\"2001\" >2001 - 2100</option>
+                                            <option value=\"2101\" >2101 - 2200</option>
+                                            <option value=\"2201\" >2201 - 2300</option>
+                                            <option value=\"2301\" >2301 - 2400</option>
+                                            <option value=\"2401\" >2401 - 2500</option>
+                                            <option value=\"2501\" >2501 - 2600</option>
+                                            <option value=\"2601\" >2601 - 2700</option>
+                                            <option value=\"2701\" >2701 - 2705</option>
+                                        </select>
+
+                    <input type=submit value=\"Anzeigen\">
+
+            </form>
+        <br /><br />
+         <!--Rang 1-100-->
+        <!--highscore-->
+        <table class=\"gw_table\" style=\"width:519px\">
+            <tr><td colspan=\"100%\" class=\"c\">Highscore</tr>
+        <tr>
+             <td class=\"t\">#</td>
+            
+                           <td class=\"t\">Name</td>
+                <!--<td class=\"t\">Allianz</td>-->
+                <td class=\"t\">Punkte<br/>Planeten</td>
+                <td class=\"t\">Punkte<br/> Forschung</td>
+                <td class=\"t\">Punkte<br/>Gesamt</td>
+                <td class=\"t\">Anzahl<br/>Planeten</td>
+                <td class=\"t\">Funktionen</td>
+                    
+        </tr>
+        
+                <tr class=\"  \">
+            <th>1                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=cpmg6\">HaPe</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>91.536</th>
+                <th>13.395</th>
+                <th>104.931</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=cpmg6\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>2                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=qmlvk\">ALB</a>
+                &nbsp;[<a href=\"allianzen.php?ally=i1u1_okob8\">MASTA</a>]</th>
+                <th>90.564</th>
+                <th>13.619</th>
+                <th>104.183</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=qmlvk\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>3                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=p3j9f\">Gerry</a>
+                &nbsp;[<a href=\"allianzen.php?ally=iv33mgctc6\">iFs</a>]</th>
+                <th>91.935</th>
+                <th>12.060</th>
+                <th>103.995</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=p3j9f\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>4                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=l2wcb\">Shagrath</a>
+                &nbsp;[<a href=\"allianzen.php?ally=rgd4qgfkbr\">Hell</a>]</th>
+                <th>86.524</th>
+                <th>16.587</th>
+                <th>103.111</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=l2wcb\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>5                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=7tdy7\">papaschlumpf</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>90.068</th>
+                <th>12.863</th>
+                <th>102.931</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=7tdy7\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>6                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=mxsh2\">Theo</a>
+                &nbsp;[<a href=\"allianzen.php?ally=q1nprfukon\">ViN-W</a>]</th>
+                <th>88.621</th>
+                <th>12.429</th>
+                <th>101.050</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=mxsh2\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>7                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=pmqdv\">heavyweather</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>83.496</th>
+                <th>13.904</th>
+                <th>97.400</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=pmqdv\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>8                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=l1fqw\">papa</a>
+                &nbsp;[<a href=\"allianzen.php?ally=fn5x8htmya\">ToT</a>]</th>
+                <th>83.173</th>
+                <th>12.553</th>
+                <th>95.726</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=l1fqw\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>9                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=yqrvk\">AlterSack</a>
+                &nbsp;[<a href=\"allianzen.php?ally=122uj0-2qb\">BKA</a>]</th>
+                <th>85.715</th>
+                <th>9.440</th>
+                <th>95.155</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=yqrvk\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>10                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=4d8ut\">Flip-Flop</a>
+                &nbsp;[<a href=\"allianzen.php?ally=7tmry_fs0w\">-HOPE-</a>]</th>
+                <th>81.191</th>
+                <th>11.084</th>
+                <th>92.275</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=4d8ut\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>11                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=p5_o2\">Gentleman1</a>
+                &nbsp;[<a href=\"allianzen.php?ally=-6q_782l6q\">CTS-W</a>]</th>
+                <th>77.477</th>
+                <th>9.464</th>
+                <th>86.941</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=p5_o2\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>12                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=mk_vn\">Gothen</a>
+                &nbsp;[<a href=\"allianzen.php?ally=tl674j4yo8\">SDT</a>]</th>
+                <th>75.882</th>
+                <th>10.625</th>
+                <th>86.507</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=mk_vn\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>13                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=5fs-i\">Wolfhearth</a>
+                &nbsp;[<a href=\"allianzen.php?ally=lnglm9nx_l\">-Wild-C-</a>]</th>
+                <th>74.038</th>
+                <th>11.460</th>
+                <th>85.498</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=5fs-i\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>14                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=7u21i\">Kampfandy</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>69.899</th>
+                <th>14.604</th>
+                <th>84.503</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=7u21i\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>15                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=0or22\">RiP</a>
+                &nbsp;[<a href=\"allianzen.php?ally=qs6an9gtq4\">ASS</a>]</th>
+                <th>73.057</th>
+                <th>9.882</th>
+                <th>82.939</th>
+                <th>19</th>
+                <th><a href=\"msg.php?to=0or22\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>16                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=c0juk\">BooH</a>
+                &nbsp;[<a href=\"allianzen.php?ally=fn5x8htmya\">ToT</a>]</th>
+                <th>68.248</th>
+                <th>11.741</th>
+                <th>79.989</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=c0juk\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>17                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=b6jqm\">Thorjin</a>
+                &nbsp;[<a href=\"allianzen.php?ally=d9hkr7c95y\">i-Trade</a>]</th>
+                <th>68.648</th>
+                <th>10.919</th>
+                <th>79.567</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=b6jqm\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>18                                          <span class=\"green\"><small>&uarr;10</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=ua1gm\">Don_Ruan</a>
+                &nbsp;[<a href=\"allianzen.php?ally=-6u09vsfcl\">DSR</a>]</th>
+                <th>69.716</th>
+                <th>9.386</th>
+                <th>79.102</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=ua1gm\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>19                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=45gay\">willi</a>
+                &nbsp;[<a href=\"allianzen.php?ally=qs6an9gtq4\">ASS</a>]</th>
+                <th>67.934</th>
+                <th>9.560</th>
+                <th>77.494</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=45gay\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>20                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=th8hi\">ABBY</a>
+                &nbsp;[<a href=\"allianzen.php?ally=h-u78yk5sn\">_UNO_</a>]</th>
+                <th>65.011</th>
+                <th>10.855</th>
+                <th>75.866</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=th8hi\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>21                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=nrms_\">DerPole</a>
+                &nbsp;[<a href=\"allianzen.php?ally=qw55diwv23\">DSR-W</a>]</th>
+                <th>59.478</th>
+                <th>15.874</th>
+                <th>75.352</th>
+                <th>19</th>
+                <th><a href=\"msg.php?to=nrms_\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>22                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=kgx3r\">Son-Gohan</a>
+                &nbsp;[<a href=\"allianzen.php?ally=_n6hah08ct\">BAZINGA</a>]</th>
+                <th>63.229</th>
+                <th>12.000</th>
+                <th>75.229</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=kgx3r\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>23                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=5qbbm\">marco1974-</a>
+                &nbsp;[<a href=\"allianzen.php?ally=h-u78yk5sn\">_UNO_</a>]</th>
+                <th>68.285</th>
+                <th>6.682</th>
+                <th>74.967</th>
+                <th>19</th>
+                <th><a href=\"msg.php?to=5qbbm\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>24                                         <span class=\"red\"><small>&darr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=hliix\">silentdeath</a>
+                &nbsp;[<a href=\"allianzen.php?ally=g4uj2wk3bp\">CraZy</a>]</th>
+                <th>64.206</th>
+                <th>10.735</th>
+                <th>74.941</th>
+                <th>19</th>
+                <th><a href=\"msg.php?to=hliix\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>25                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=g3ivb\">OldMan</a>
+                </th>
+                <th>65.298</th>
+                <th>8.896</th>
+                <th>74.194</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=g3ivb\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>26                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=7tc-s\">mindcrime</a>
+                &nbsp;[<a href=\"allianzen.php?ally=y18jh880c1\">Popplers</a>]</th>
+                <th>65.542</th>
+                <th>8.030</th>
+                <th>73.572</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=7tc-s\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>27                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=xkk16\">InFlUeNzA</a>
+                &nbsp;[<a href=\"allianzen.php?ally=_n6hah08ct\">BAZINGA</a>]</th>
+                <th>60.008</th>
+                <th>12.152</th>
+                <th>72.160</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=xkk16\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>28                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=d18b1\">Marshens</a>
+                &nbsp;[<a href=\"allianzen.php?ally=plcoa_x9h4\">poppR</a>]</th>
+                <th>60.768</th>
+                <th>11.133</th>
+                <th>71.901</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=d18b1\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  ally \">
+            <th>29                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=ftp3j\">snoopy</a>
+                &nbsp;[<a href=\"allianzen.php?ally=k8rh95rkot\">C</a>]</th>
+                <th>60.932</th>
+                <th>10.402</th>
+                <th>71.334</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=ftp3j\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>30                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=961dr\">DaVirgo</a>
+                &nbsp;[<a href=\"allianzen.php?ally=qw55diwv23\">DSR-W</a>]</th>
+                <th>58.940</th>
+                <th>11.994</th>
+                <th>70.934</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=961dr\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>31                                          <span class=\"green\"><small>&uarr;9</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=7g-9o\">Lord_Jackpot</a>
+                &nbsp;[<a href=\"allianzen.php?ally=fn5x8htmya\">ToT</a>]</th>
+                <th>59.542</th>
+                <th>10.890</th>
+                <th>70.432</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=7g-9o\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>32                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=cfxf0\">powron</a>
+                &nbsp;[<a href=\"allianzen.php?ally=plcoa_x9h4\">poppR</a>]</th>
+                <th>58.893</th>
+                <th>11.411</th>
+                <th>70.304</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=cfxf0\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>33                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=u4py9\">Nadiria</a>
+                &nbsp;[<a href=\"allianzen.php?ally=qw55diwv23\">DSR-W</a>]</th>
+                <th>59.799</th>
+                <th>10.448</th>
+                <th>70.247</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=u4py9\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>34                                         <span class=\"red\"><small>&darr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=v349w\">michael2004nbg</a>
+                &nbsp;[<a href=\"allianzen.php?ally=lnglm9nx_l\">-Wild-C-</a>]</th>
+                <th>60.579</th>
+                <th>9.636</th>
+                <th>70.215</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=v349w\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>35                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=ggt62\">The-Outlaw</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>58.517</th>
+                <th>11.197</th>
+                <th>69.714</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=ggt62\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>36                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=p36b7\">hooger</a>
+                &nbsp;[<a href=\"allianzen.php?ally=h-u78yk5sn\">_UNO_</a>]</th>
+                <th>60.848</th>
+                <th>8.561</th>
+                <th>69.409</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=p36b7\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>37                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=rwigh\">Chrisu16</a>
+                &nbsp;[<a href=\"allianzen.php?ally=-6q_782l6q\">CTS-W</a>]</th>
+                <th>60.184</th>
+                <th>9.133</th>
+                <th>69.317</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=rwigh\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>38                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=l2koe\">weedlock</a>
+                &nbsp;[<a href=\"allianzen.php?ally=-6u09vsfcl\">DSR</a>]</th>
+                <th>58.823</th>
+                <th>10.195</th>
+                <th>69.018</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=l2koe\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>39                                          <span class=\"green\"><small>&uarr;3</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=8myyc\">Marokkaner</a>
+                </th>
+                <th>58.015</th>
+                <th>10.729</th>
+                <th>68.744</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=8myyc\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>40                                         <span class=\"red\"><small>&darr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=2o359\">Kali</a>
+                &nbsp;[<a href=\"allianzen.php?ally=v0yix-13h5\">FEAR</a>]</th>
+                <th>62.369</th>
+                <th>6.319</th>
+                <th>68.688</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=2o359\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>41                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=dwq-m\">maverick-x</a>
+                &nbsp;[<a href=\"allianzen.php?ally=cmqu7fih21\">IPA</a>]</th>
+                <th>56.170</th>
+                <th>11.549</th>
+                <th>67.719</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=dwq-m\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>42                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=e8xsv\">williwinzig</a>
+                &nbsp;[<a href=\"allianzen.php?ally=4k2ef_vbuy\">LDB</a>]</th>
+                <th>56.926</th>
+                <th>10.253</th>
+                <th>67.179</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=e8xsv\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>43                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=d4886\">nelson</a>
+                &nbsp;[<a href=\"allianzen.php?ally=fpp7ytpbj6\">667</a>]</th>
+                <th>60.768</th>
+                <th>6.284</th>
+                <th>67.052</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=d4886\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>44                                         <span class=\"red\"><small>&darr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=ovohd\">psycho</a>
+                &nbsp;[<a href=\"allianzen.php?ally=egqia_erwf\">dWR</a>]</th>
+                <th>54.833</th>
+                <th>12.083</th>
+                <th>66.916</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=ovohd\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>45                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=wsccf\">Siru</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>54.952</th>
+                <th>11.430</th>
+                <th>66.382</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=wsccf\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>46                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=it--3\">BlackVir</a>
+                &nbsp;[<a href=\"allianzen.php?ally=lnglm9nx_l\">-Wild-C-</a>]</th>
+                <th>56.919</th>
+                <th>9.067</th>
+                <th>65.986</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=it--3\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>47                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=9o8g9\">thalla</a>
+                &nbsp;[<a href=\"allianzen.php?ally=rgd4qgfkbr\">Hell</a>]</th>
+                <th>53.261</th>
+                <th>12.442</th>
+                <th>65.703</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=9o8g9\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>48                                         <span class=\"red\"><small>&darr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=12yb7\">Smaug</a>
+                </th>
+                <th>58.314</th>
+                <th>7.350</th>
+                <th>65.664</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=12yb7\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>49                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=s_3vf\">Priest</a>
+                &nbsp;[<a href=\"allianzen.php?ally=fn5x8htmya\">ToT</a>]</th>
+                <th>55.980</th>
+                <th>9.509</th>
+                <th>65.489</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=s_3vf\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>50                                          <span class=\"green\"><small>&uarr;12</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=tq7it\">Drachenkopf</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>53.162</th>
+                <th>12.241</th>
+                <th>65.403</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=tq7it\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>51                                         <span class=\"red\"><small>&darr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=pn065\">_sQuare_</a>
+                &nbsp;[<a href=\"allianzen.php?ally=egqia_erwf\">dWR</a>]</th>
+                <th>56.438</th>
+                <th>8.891</th>
+                <th>65.329</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=pn065\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>52                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=dkv_g\">Mack</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>55.336</th>
+                <th>9.796</th>
+                <th>65.132</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=dkv_g\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>53                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=1t8rg\">DerDrake</a>
+                &nbsp;[<a href=\"allianzen.php?ally=-6q_782l6q\">CTS-W</a>]</th>
+                <th>51.319</th>
+                <th>13.482</th>
+                <th>64.801</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=1t8rg\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>54                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=r3y1v\">bettler</a>
+                &nbsp;[<a href=\"allianzen.php?ally=plcoa_x9h4\">poppR</a>]</th>
+                <th>54.765</th>
+                <th>9.871</th>
+                <th>64.636</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=r3y1v\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>55                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=-mtwb\">xoxi</a>
+                &nbsp;[<a href=\"allianzen.php?ally=4k2ef_vbuy\">LDB</a>]</th>
+                <th>55.045</th>
+                <th>9.403</th>
+                <th>64.448</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=-mtwb\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>56                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=e-x0c\">Peter-Enis</a>
+                &nbsp;[<a href=\"allianzen.php?ally=qw55diwv23\">DSR-W</a>]</th>
+                <th>55.107</th>
+                <th>8.955</th>
+                <th>64.062</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=e-x0c\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>57                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=40sy-\">shark652</a>
+                &nbsp;[<a href=\"allianzen.php?ally=tl674j4yo8\">SDT</a>]</th>
+                <th>54.989</th>
+                <th>8.987</th>
+                <th>63.976</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=40sy-\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>58                                         <span class=\"red\"><small>&darr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=ynamo\">Scrovy</a>
+                &nbsp;[<a href=\"allianzen.php?ally=egqia_erwf\">dWR</a>]</th>
+                <th>51.492</th>
+                <th>12.160</th>
+                <th>63.652</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=ynamo\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>59                                          <span class=\"green\"><small>&uarr;4</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=qb4ed\">Sittingbull2012</a>
+                &nbsp;[<a href=\"allianzen.php?ally=plcoa_x9h4\">poppR</a>]</th>
+                <th>56.972</th>
+                <th>6.513</th>
+                <th>63.485</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=qb4ed\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>60                                         <span class=\"red\"><small>&darr;6</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=jv696\">extinction</a>
+                &nbsp;[<a href=\"allianzen.php?ally=y18jh880c1\">Popplers</a>]</th>
+                <th>53.329</th>
+                <th>10.110</th>
+                <th>63.439</th>
+                <th>19</th>
+                <th><a href=\"msg.php?to=jv696\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  ally \">
+            <th>61                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=236s4\">HellGuard</a>
+                &nbsp;[<a href=\"allianzen.php?ally=k8rh95rkot\">C</a>]</th>
+                <th>55.734</th>
+                <th>7.632</th>
+                <th>63.366</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=236s4\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>62                                         <span class=\"red\"><small>&darr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=s1xhh\">Admiral_w0rf</a>
+                &nbsp;[<a href=\"allianzen.php?ally=rgd4qgfkbr\">Hell</a>]</th>
+                <th>55.429</th>
+                <th>7.925</th>
+                <th>63.354</th>
+                <th>19</th>
+                <th><a href=\"msg.php?to=s1xhh\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>63                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=dm5fj\">Lord_Ram</a>
+                &nbsp;[<a href=\"allianzen.php?ally=-6q_782l6q\">CTS-W</a>]</th>
+                <th>48.454</th>
+                <th>14.333</th>
+                <th>62.787</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=dm5fj\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>64                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=u6gcp\">DrFake</a>
+                &nbsp;[<a href=\"allianzen.php?ally=plcoa_x9h4\">poppR</a>]</th>
+                <th>55.215</th>
+                <th>7.270</th>
+                <th>62.485</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=u6gcp\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>65                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=hkewm\">SonOfOdin</a>
+                &nbsp;[<a href=\"allianzen.php?ally=_n6hah08ct\">BAZINGA</a>]</th>
+                <th>51.538</th>
+                <th>10.756</th>
+                <th>62.294</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=hkewm\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>66                                          <span class=\"green\"><small>&uarr;10</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=xxu2c\">Ronald_McDonald</a>
+                &nbsp;[<a href=\"allianzen.php?ally=qw55diwv23\">DSR-W</a>]</th>
+                <th>54.175</th>
+                <th>7.248</th>
+                <th>61.423</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=xxu2c\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>67                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=j254-\">Snatcher</a>
+                </th>
+                <th>52.770</th>
+                <th>8.552</th>
+                <th>61.322</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=j254-\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>68                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=yuw-i\">Jormungandr</a>
+                </th>
+                <th>53.046</th>
+                <th>8.215</th>
+                <th>61.261</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=yuw-i\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>69                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=d9q3_\">baron_deorion</a>
+                &nbsp;[<a href=\"allianzen.php?ally=y1ctescf26\">ZdV</a>]</th>
+                <th>54.724</th>
+                <th>6.522</th>
+                <th>61.246</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=d9q3_\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>70                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=0d48v\">BiErBaRoN</a>
+                &nbsp;[<a href=\"allianzen.php?ally=5dle7p_87v\">DbPG</a>]</th>
+                <th>51.431</th>
+                <th>9.715</th>
+                <th>61.146</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=0d48v\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>71                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=9wklr\">Son-Goten</a>
+                &nbsp;[<a href=\"allianzen.php?ally=_n6hah08ct\">BAZINGA</a>]</th>
+                <th>50.309</th>
+                <th>10.734</th>
+                <th>61.043</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=9wklr\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>72                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=h36k_\">Easyrider</a>
+                &nbsp;[<a href=\"allianzen.php?ally=su_ka44rne\">D-A</a>]</th>
+                <th>53.950</th>
+                <th>6.924</th>
+                <th>60.874</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=h36k_\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>73                                         <span class=\"red\"><small>&darr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=qg05y\">TheHitchhiker</a>
+                &nbsp;[<a href=\"allianzen.php?ally=yv_i_g36k3\">GttG</a>]</th>
+                <th>52.293</th>
+                <th>8.580</th>
+                <th>60.873</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=qg05y\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>74                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=yg62m\">Lupoo</a>
+                &nbsp;[<a href=\"allianzen.php?ally=5dle7p_87v\">DbPG</a>]</th>
+                <th>51.624</th>
+                <th>9.029</th>
+                <th>60.653</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=yg62m\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>75                                         <span class=\"red\"><small>&darr;4</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=-9vt2\">mk525</a>
+                &nbsp;[<a href=\"allianzen.php?ally=plcoa_x9h4\">poppR</a>]</th>
+                <th>51.691</th>
+                <th>8.821</th>
+                <th>60.512</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=-9vt2\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>76                                          <span class=\"green\"><small>&uarr;3</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=darqq\">ElBarto</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ww00nbo7px\">CTS</a>]</th>
+                <th>49.056</th>
+                <th>10.765</th>
+                <th>59.821</th>
+                <th>19</th>
+                <th><a href=\"msg.php?to=darqq\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>77                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=xtu54\">ThePJK</a>
+                </th>
+                <th>49.162</th>
+                <th>10.566</th>
+                <th>59.728</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=xtu54\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>78                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=ifxnw\">miiLoo</a>
+                </th>
+                <th>51.041</th>
+                <th>8.602</th>
+                <th>59.643</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=ifxnw\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>79                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=74tck\">CrImE</a>
+                &nbsp;[<a href=\"allianzen.php?ally=_n6hah08ct\">BAZINGA</a>]</th>
+                <th>50.176</th>
+                <th>9.236</th>
+                <th>59.412</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=74tck\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>80                                          <span class=\"green\"><small>&uarr;3</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=mfk76\">IchoTolot</a>
+                &nbsp;[<a href=\"allianzen.php?ally=su_ka44rne\">D-A</a>]</th>
+                <th>50.467</th>
+                <th>8.796</th>
+                <th>59.263</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=mfk76\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>81                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=ohqy6\">3phasenHass</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ryv__8377i\">AoW-FC</a>]</th>
+                <th>50.848</th>
+                <th>8.365</th>
+                <th>59.213</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=ohqy6\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>82                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=wl1u4\">qL2.0</a>
+                &nbsp;[<a href=\"allianzen.php?ally=i1u1_okob8\">MASTA</a>]</th>
+                <th>50.774</th>
+                <th>8.172</th>
+                <th>58.946</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=wl1u4\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>83                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=3d177\">jack_granger</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>45.932</th>
+                <th>12.532</th>
+                <th>58.464</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=3d177\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>84                                          <span class=\"green\"><small>&uarr;5</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=5gyju\">Warlord</a>
+                &nbsp;[<a href=\"allianzen.php?ally=qs6an9gtq4\">ASS</a>]</th>
+                <th>48.079</th>
+                <th>10.180</th>
+                <th>58.259</th>
+                <th>16</th>
+                <th><a href=\"msg.php?to=5gyju\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>85                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=i2jd_\">black-panther</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ct94d036-h\">HANF-AoW</a>]</th>
+                <th>47.131</th>
+                <th>10.720</th>
+                <th>57.851</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=i2jd_\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  ally \">
+            <th>86                                          <span class=\"green\"><small>&uarr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=qukqj\">Amserodi23</a>
+                &nbsp;[<a href=\"allianzen.php?ally=k8rh95rkot\">C</a>]</th>
+                <th>49.169</th>
+                <th>8.674</th>
+                <th>57.843</th>
+                <th>19</th>
+                <th><a href=\"msg.php?to=qukqj\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>87                                         <span class=\"red\"><small>&darr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=au7ei\">WoDiM</a>
+                &nbsp;[<a href=\"allianzen.php?ally=_-nqx_-7cl\">poppNG</a>]</th>
+                <th>49.816</th>
+                <th>7.700</th>
+                <th>57.516</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=au7ei\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>88                                         <span class=\"red\"><small>&darr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=ynn0y\">duke</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ywo65c2_up\">Devil</a>]</th>
+                <th>48.256</th>
+                <th>9.109</th>
+                <th>57.365</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=ynn0y\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>89                                          <span class=\"green\"><small>&uarr;3</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=pmv15\">schwarze_sau</a>
+                &nbsp;[<a href=\"allianzen.php?ally=egqia_erwf\">dWR</a>]</th>
+                <th>45.875</th>
+                <th>11.359</th>
+                <th>57.234</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=pmv15\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>90                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=dxryg\">XIII</a>
+                &nbsp;[<a href=\"allianzen.php?ally=y18jh880c1\">Popplers</a>]</th>
+                <th>46.895</th>
+                <th>9.952</th>
+                <th>56.847</th>
+                <th>19</th>
+                <th><a href=\"msg.php?to=dxryg\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>91                                         <span class=\"red\"><small>&darr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=svmqa\">Lord-Atlan</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ywo65c2_up\">Devil</a>]</th>
+                <th>48.244</th>
+                <th>8.564</th>
+                <th>56.808</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=svmqa\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>92                                          <span class=\"green\"><small>&uarr;6</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=86k62\">Bobbel</a>
+                &nbsp;[<a href=\"allianzen.php?ally=-6q_782l6q\">CTS-W</a>]</th>
+                <th>48.453</th>
+                <th>8.217</th>
+                <th>56.670</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=86k62\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>93                                          <span class=\"green\"><small>&uarr;3</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=cita6\">grischu</a>
+                &nbsp;[<a href=\"allianzen.php?ally=ww00nbo7px\">CTS</a>]</th>
+                <th>46.839</th>
+                <th>9.709</th>
+                <th>56.548</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=cita6\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>94                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=xqm0-\">Krauteater</a>
+                &nbsp;[<a href=\"allianzen.php?ally=5dle7p_87v\">DbPG</a>]</th>
+                <th>46.299</th>
+                <th>10.210</th>
+                <th>56.509</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=xqm0-\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>95                                         <span class=\"red\"><small>&darr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=t_wwx\">Niemandem</a>
+                </th>
+                <th>48.160</th>
+                <th>8.227</th>
+                <th>56.387</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=t_wwx\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>96                                         <span class=\"red\"><small>&darr;2</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=7s61s\">Shaytan</a>
+                </th>
+                <th>48.196</th>
+                <th>8.097</th>
+                <th>56.293</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=7s61s\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>97                                          &bull;
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=0lfbt\">FanaTic</a>
+                &nbsp;[<a href=\"allianzen.php?ally=plcoa_x9h4\">poppR</a>]</th>
+                <th>51.528</th>
+                <th>4.615</th>
+                <th>56.143</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=0lfbt\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>98                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=vjv6v\">Shepard</a>
+                &nbsp;[<a href=\"allianzen.php?ally=_n6hah08ct\">BAZINGA</a>]</th>
+                <th>47.806</th>
+                <th>8.266</th>
+                <th>56.072</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=vjv6v\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>99                                          <span class=\"green\"><small>&uarr;1</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=dq514\">Alan</a>
+                &nbsp;[<a href=\"allianzen.php?ally=qw55diwv23\">DSR-W</a>]</th>
+                <th>45.586</th>
+                <th>10.145</th>
+                <th>55.731</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=dq514\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                <tr class=\"  \">
+            <th>100                                          <span class=\"green\"><small>&uarr;5</small></span>
+                                      </th>
+                            <th>
+                <a href=\"playercard.php?u=kwhfu\">Senju</a>
+                &nbsp;[<a href=\"allianzen.php?ally=-6u09vsfcl\">DSR</a>]</th>
+                <th>45.656</th>
+                <th>9.244</th>
+                <th>54.900</th>
+                <th>20</th>
+                <th><a href=\"msg.php?to=kwhfu\"><img src=\"design/gw/m.gif\"></a> 
+                                </th>
+                    
+        </tr>
+                </table>
+</center>
+<!-- qc: 19--->
+</div></center>
+</div> <!-- Ende Wrapper -->
+
+<script type=\"text/javascript\">
+
+  var _gaq = _gaq || [];
+  _gaq.push([\'_setAccount\', \'UA-34106766-1\']);
+  _gaq.push([\'_setDomainName\', \'gigrawars.de\']);
+  _gaq.push([\'_trackPageview\']);
+
+  (function() {
+    var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;
+    ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';
+    var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+                    <script type=\"text/javascript\" src=\"http://www.sponsorads.de/script.php?s=218500\"></script>
+    </body>
+</html>

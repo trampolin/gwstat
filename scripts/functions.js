@@ -23,7 +23,7 @@ $(function() {
 		$.ajax({
 			type: "POST",
 			url: "bin/process_highscore.php",
-			data: { msg: message, password: 'supergeil'},
+			data: { msg: message, password: 'supergeil', mode:'text'},
 			success: function(data) {
 				showNotification(data,'good');
 				$("#highscoreergebnis").html('<p>Ergebnis</p>'+data);

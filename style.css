@@ -116,6 +116,10 @@ body {
 /*position:relative; display:block; background:#0ac; border-left:800px solid white; border-right:140px solid white; overflow:visible;*/
 }
 
+#submenu {
+	background-color: #eeeeff;
+}
+
 .bigfont {
 	font-size: 20px;
 	font-weight: bold;

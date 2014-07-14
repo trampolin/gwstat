@@ -2,6 +2,7 @@
 
 if (isset($login)) {
 	if ($login->isUserLoggedIn() == true) {
+		farmMenu();
 		require_once("bin/database.php");
 
 		$db = new DatabaseConnection();
@@ -111,7 +112,12 @@ if (isset($login)) {
 				<?php
 				foreach($row as $key => $value)
 				{
+					if ($key=='Planet') {
+					?><td><a href="http://uni1.gigrawars.de/playercard.php?p=<?php echo $value; ?>:1"><?php echo $value; ?></a></td><?php
+					}
+					else {
 					?><td><?php echo $value; ?></td><?php
+					}
 				}
 				?>
 				</tr>

@@ -8,6 +8,7 @@
 	}
 	require_once(ROOT_DIR."/config/db.php");
 	require_once(ROOT_DIR."/classes/login/Login.php");
+	require_once(ROOT_DIR."/bin/functions.php");
 	
 	$login = new Login();
 	
@@ -35,7 +36,7 @@
 			if ($login->isUserLoggedIn() == true) { ?>
 				<div id="navigation" class="round innerfull bigfont">
 					<a href="?action=farmen"><div class="navigationitem round">Farmen</div></a>
-					<a href="?action=auswertung"><div class="navigationitem round">Alles</div></a>
+					<!--a href="?action=auswertung"><div class="navigationitem round">Alles</div></a-->
 					<a href="?action=highscore"><div class="navigationitem round">Highscore</div></a>
 				</div>
 		<?php } ?>
@@ -44,14 +45,17 @@
 				if ($login->isUserLoggedIn() == true) { ?>
 						<?php 
 							switch ($action) {
-								case "auswertung":
-									include("views/auswertung.php");
+								case "farmen_auswertung":
+									include("views/farmen_auswertung.php");
 									break;
 								case "farmen":
 									include("views/farmen.php");
 									break;
 								case "highscore":
 									include("views/highscore.php");
+									break;
+								case "highscore_auswertung":
+									include("views/highscore_auswertung.php");
 									break;
 								case null:
 									include("views/farmen.php");

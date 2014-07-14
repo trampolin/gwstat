@@ -1,10 +1,10 @@
 <?php
-
+highscoreMenu();
 ?>
 <div class="contentitem round" id="highscore_form">
 <form name="farmen" action="" method="post">
 
-	<p>Text von der Highscoreliste</p>
+	<p>Text von der Highscoreliste <b>!BETA!</b></p>
 	<p><textarea name="msg" id="msg_highscore" rows="20" cols="100"></textarea></p>
 	<p><input type="submit" name="send" class="button" id="submit_highscore" value="Highscore auswerten"></p>
 
