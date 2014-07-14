@@ -5,6 +5,7 @@
 
 	$msg = isset($_POST['msg']) ? $_POST['msg'] : null;
 	$pw = isset($_POST['password']) ? $_POST['password'] : null;
+	$mode = isset($_POST['password']) ? $_POST['password'] : 'text';
 	
 	
 	if (($pw == 'supergeil') && ($msg != null)) {
@@ -29,8 +30,16 @@
 			echo '<p>'.$res[$key].': '.$val;
 		}
 		
-		$returnValue = preg_match_all("/([0-9]+\.[0-9]+\.20[0-9]+)\s+-\s+([0-9]+:[0-9]+:[0-9]+).([0-9]+):([0-9]+):([0-9]+)\s+Eine Ihrer Flotten ist von ([0-9]+):([0-9]+):([0-9]+) zur.+ckgekehrt mit folgenden Rohstoffen:[\s]+([0-9\.]+) Eisen, ([0-9\.]+) Silizium, ([0-9\.]+) Wasser und ([0-9\.]+) Wasserstoff/",$msg,$ausgabe);
+		if ($mode == 'text') {
 		
+			$returnValue = preg_match_all("/([0-9]+\.[0-9]+\.20[0-9]+)\s+-\s+([0-9]+:[0-9]+:[0-9]+).([0-9]+):([0-9]+):([0-9]+)\s+Eine Ihrer Flotten ist von ([0-9]+):([0-9]+):([0-9]+) zur.+ckgekehrt mit folgenden Rohstoffen:[\s]+([0-9\.]+) Eisen, ([0-9\.]+) Silizium, ([0-9\.]+) Wasser und ([0-9\.]+) Wasserstoff/",$msg,$ausgabe);
+		}
+		else
+		{
+			$msg = str_replace('\\"','"',$msg);
+			$msg = str_replace('\\\'','\'',$msg);
+			$returnValue = preg_match_all("/>([0-9]+\.[0-9]+\.20[0-9]+)\s+-\s+([0-9]+:[0-9]+:[0-9]+)<\/td><th>([0-9]+):([0-9]+):([0-9]+)<\/th><td class=.[0-9a-zA-Z]+.>Eine Ihrer Flotten ist von <a href=.galaxie\.php\?to=[0-9]+:[0-9]+.>([0-9]+):([0-9]+):([0-9]+)<\/a> zur&uuml;ckgekehrt mit folgenden Rohstoffen:<br>([0-9\.]+) Eisen, ([0-9\.]+) Silizium, ([0-9\.]+) Wasser und ([0-9\.]+) Wasserstoff</",$msg,$ausgabe);
+		}
 		echo '<p>Anzahl der Berichte:'.$returnValue.'</p>';
 		$db = new DatabaseConnection();
 		
