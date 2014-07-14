@@ -61,7 +61,8 @@
 				$ausgabe[3][$i].",".
 				$ausgabe[4][$i].",".
 				$ausgabe[5][$i].",".
-				'NULL'.
+				'NULL,'.
+				( ($ausgabe[9][$i] == 0) && ($ausgabe[9][$i] == 0) && ($ausgabe[9][$i] == 0) ? 1 : 0)
 			")";
 			
 			$db->query($q);

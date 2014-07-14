@@ -52,6 +52,9 @@
 	//
 	
 	
+	// REGEX für die Planeten auf der Playercard:
+	// /<th><a href=.galaxie.php.to.[0-9]+:[0-9]+.>([0-9]+):([0-9]+):([0-9]+)<\/a><\/th>\s+<th>([a-zA-Z\-\._]+)</
+	
 	
 ///([0-9]+\.[0-9]+\.20[0-9]+).-.([0-9]+:[0-9]+:[0-9]+).(([0-9]+):([0-9]+):([0-9]+)).Eine.Ihrer.Flotten.ist.von.(([0-9]+):([0-9]+):([0-9]+)).zurückgekehrt.mit.folgenden.Rohstoffen:.([0-9\.]+).Eisen,.([0-9\.]+).Silizium,.([0-9\.]+).Wasser.und.([0-9\.]+).Wasserstoff/six
 ?>
