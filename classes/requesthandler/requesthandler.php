@@ -6,6 +6,7 @@ require_once("responseTypes.php");
 require_once(ROOT_DIR."/bin/database.php");
 require_once(ROOT_DIR."/classes/interfaces/basicInterface.php");
 require_once(ROOT_DIR."/classes/interfaces/highscoreInterface.php");
+require_once(ROOT_DIR."/classes/interfaces/farmInterface.php");
 
 
 function handleRequest() {

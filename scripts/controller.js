@@ -94,3 +94,66 @@ function requestActiveHighscore(aContainer) {
 	requestInterface("HighscoreInterface","getActiveHighscore",undefined,requestActiveHighscoreCallback,undefined);
 }
 
+function requestFarmPerDay(aContainer) {
+	var requestFarmPerDayCallback = function(response) {
+		if (checkResult(response)) 
+		{
+			$("#"+aContainer).html(response.data);
+			$('#'+aContainer).slideDown();
+			$('#toggle'+aContainer).text('verstecken');
+		}
+		else
+		{
+			showNotification(response.message,'bad');
+		}
+	};
+	requestInterface("FarmInterface","getCompleteFarmPerDay",undefined,requestFarmPerDayCallback,undefined);
+}
+
+function requestFarmPerOwnPlanet(aContainer) {
+	var requestFarmPerOwnPlanetCallback = function(response) {
+		if (checkResult(response)) 
+		{
+			$("#"+aContainer).html(response.data);
+			$('#'+aContainer).slideDown();
+			$('#toggle'+aContainer).text('verstecken');
+		}
+		else
+		{
+			showNotification(response.message,'bad');
+		}
+	};
+	requestInterface("FarmInterface","getCompleteFarmPerOwnPlanet",undefined,requestFarmPerOwnPlanetCallback,undefined);
+}
+
+function requestFarmPerPlanet(aContainer) {
+	var requestFarmPerPlanetCallback = function(response) {
+		if (checkResult(response)) 
+		{
+			$("#"+aContainer).html(response.data);
+			$('#'+aContainer).slideDown();
+			$('#toggle'+aContainer).text('verstecken');
+		}
+		else
+		{
+			showNotification(response.message,'bad');
+		}
+	};
+	requestInterface("FarmInterface","getCompletePerFarm",undefined,requestFarmPerPlanetCallback,undefined);
+}
+
+function requestAvgFarmPerPlanet(aContainer) {
+	var requestAvgFarmPerPlanetCallback = function(response) {
+		if (checkResult(response)) 
+		{
+			$("#"+aContainer).html(response.data);
+			$('#'+aContainer).slideDown();
+			$('#toggle'+aContainer).text('verstecken');
+		}
+		else
+		{
+			showNotification(response.message,'bad');
+		}
+	};
+	requestInterface("FarmInterface","getAveragePerFarm",undefined,requestAvgFarmPerPlanetCallback,undefined);
+}

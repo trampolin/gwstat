@@ -3,9 +3,7 @@
 if (isset($login)) {
 	if ($login->isUserLoggedIn() == true) {
 		highscoreMenu();
-		require_once("bin/database.php")
 		?>
-		
 		<div class="contentitem round">
 			<p>Aktive Spieler <a href="#" id="toggleactivehighscore">anzeigen</a></p>
 			<div id="activehighscore" class="hidden">
@@ -19,7 +17,6 @@ if (isset($login)) {
 				<p>Loading...</p>
 			</div>
 		</div>
-		
 		<?php
 	}
 		
