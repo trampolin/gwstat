@@ -28,6 +28,7 @@
 <script src="scripts/jquery.blockUI.js" type="text/javascript"></script>
 <script src="scripts/jquery.jgrowl.js" type="text/javascript"></script>
 <script src="scripts/functions.js" type="text/javascript"></script>
+<script src="scripts/controller.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="everything" class="round fullwidth">

@@ -34,10 +34,16 @@ $(function() {
   });
 });
 
-function makeToggleAble(linkid,divid) {
+function makeToggleAble(linkid,divid,firstUse) {
 	$('#'+linkid).click(function() {
-		$('#'+divid).slideToggle();
-		$(this).text($(this).text() == 'anzeigen' ? 'verstecken' : 'anzeigen');
+		if ($('#'+divid).html().indexOf('<p>Loading...</p>') != -1) { 
+			firstUse();
+		}
+		else
+		{
+			$('#'+divid).slideToggle();
+			$(this).text($(this).text() == 'anzeigen' ? 'verstecken' : 'anzeigen');
+		}
 	});
 }
 
