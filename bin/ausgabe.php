@@ -5,7 +5,7 @@
 
 	$msg = isset($_POST['msg']) ? $_POST['msg'] : null;
 	$pw = isset($_POST['password']) ? $_POST['password'] : null;
-	$mode = isset($_POST['password']) ? $_POST['password'] : 'text';
+	$mode = isset($_POST['mode']) ? $_POST['mode'] : 'text';
 	
 	
 	if (($pw == 'supergeil') && ($msg != null)) {
@@ -32,6 +32,7 @@
 		
 		if ($mode == 'text') {
 		
+			//echo $msg;
 			$returnValue = preg_match_all("/([0-9]+\.[0-9]+\.20[0-9]+)\s+-\s+([0-9]+:[0-9]+:[0-9]+).([0-9]+):([0-9]+):([0-9]+)\s+Eine Ihrer Flotten ist von ([0-9]+):([0-9]+):([0-9]+) zur.+ckgekehrt mit folgenden Rohstoffen:[\s]+([0-9\.]+) Eisen, ([0-9\.]+) Silizium, ([0-9\.]+) Wasser und ([0-9\.]+) Wasserstoff/",$msg,$ausgabe);
 		}
 		else
@@ -62,7 +63,7 @@
 				$ausgabe[4][$i].",".
 				$ausgabe[5][$i].",".
 				'NULL,'.
-				( ($ausgabe[9][$i] == 0) && ($ausgabe[9][$i] == 0) && ($ausgabe[9][$i] == 0) ? 1 : 0)
+				( ($ausgabe[9][$i] == 0) && ($ausgabe[9][$i] == 0) && ($ausgabe[9][$i] == 0) ? 1 : 0).
 			")";
 			
 			$db->query($q);

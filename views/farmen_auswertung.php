@@ -11,6 +11,8 @@ if (isset($login)) {
 		
 		$result =$db->query($q);
 		
+		$bla = 0;
+		
 		if ($db->get_last_num_rows() > 0)
 		{ ?>
 		<div class="contentitem round">
@@ -74,7 +76,12 @@ if (isset($login)) {
 				<?php
 				foreach($row as $key => $value)
 				{
+					if ($key=='Planet') {
+					?><td><a href="http://uni1.gigrawars.de/playercard.php?p=<?php echo $value; ?>:1"><?php echo $value; ?></a></td><?php
+					}
+					else {
 					?><td><?php echo $value; ?></td><?php
+					}
 				}
 				?>
 				</tr>
