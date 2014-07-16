@@ -7,6 +7,7 @@
 	$pw = isset($_POST['password']) ? $_POST['password'] : null;
 	$mode = isset($_POST['mode']) ? $_POST['mode'] : 'text';
 	
+	echo '<p>'.$mode.'-modus</p>';
 	
 	if (($pw == 'supergeil') && ($msg != null)) {
 		

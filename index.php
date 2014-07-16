@@ -39,6 +39,7 @@
 					<a href="?action=farmen"><div class="navigationitem round">Farmen</div></a>
 					<!--a href="?action=auswertung"><div class="navigationitem round">Alles</div></a-->
 					<a href="?action=highscore"><div class="navigationitem round">Highscore</div></a>
+					<a href="?action=planeten_auswertung"><div class="navigationitem round">Planeten</div></a>
 				</div>
 		<?php } ?>
 		<div id="content" class="round innerfull">
@@ -57,6 +58,12 @@
 									break;
 								case "highscore_auswertung":
 									include("views/highscore_auswertung.php");
+									break;
+								case "planeten_auswertung":
+									include("views/planeten_auswertung.php");
+									break;
+								case "planeten":
+									include("views/planeten.php");
 									break;
 								case null:
 									include("views/farmen.php");

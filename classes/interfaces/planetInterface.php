@@ -1,0 +1,8 @@
+<?php//require_once(ROOT_DIR."/classes/entities/band.php");class PlanetInterface extends BasicInterface {		public function __construct($db = null) {		parent::__construct($db);	}		public function getAllPlanets($data)	{		$q = "SELECT CONCAT(  `pl_galaxie` ,  ':',  `pl_system` ,  ':',  `pl_planet` ) AS Planet,pl_name,pl_spieler from planeten order by pl_galaxie,pl_system,pl_planet";				$result=$this->db->query($q);				$bla = 0;				$html = '<table class="auswertung"><tr><th>Planet</th><th>Name</th><th>Spieler</th></tr>';				if ($this->db->get_last_num_rows() > 0)		{ 			while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) 			{				$bla++;
+				
+				$html .= '<tr>';
+								foreach($row as $key => $value)				{						if ($key == 'pl_spieler')						{							$html .= '<td><a href="http://uni1.gigrawars.de/playercard.php?p='.$row['Planet'].':1">'.$value.'</a></td>';						}						else						if ($key == 'Planet')						{							$html .= '<td><a href="http://uni1.gigrawars.de/galaxie.php?to='.$value.'">'.$value.'</a></td>';						}						else						{							$html .= '<td>'.$value.'</td>';						}											}				$html .= '</tr>';									if ($bla%30==29) 				{					$html .= '<tr>'.					'		<th>Planet</th>'.					'		<th>Name</th>'.					'		<th>Spieler</th>'.					'	</tr>';				}			}		}
+		else
+		{
+			$html .= '<tr><td colspan="3">Nicht genug Daten gesammelt!</td></tr>';
+		}		$html .= '</table>';				return new DataResponse(ResultTypes::resultOK,"getAllPlanets",$html);	}	}PlanetInterface::registerInterface();?>

@@ -34,6 +34,24 @@ $(function() {
   });
 });
 
+$(function() {
+  $("#submit_planeten").click(function() {
+		var message = $("#msg_planeten").val();
+		
+		$.ajax({
+			type: "POST",
+			url: "bin/process_planeten.php",
+			data: { msg: message, password: 'supergeil', mode:'text'},
+			success: function(data) {
+				showNotification(data,'good');
+				$("#planetenergebnis").html('<p>Ergebnis</p>'+data);
+				$('#msg_planeten').val("");
+			}
+		});
+		return false;
+  });
+});
+
 function makeToggleAble(linkid,divid,firstUse) {
 	$('#'+linkid).click(function() {
 		if ($('#'+divid).html().indexOf('<p>Loading...</p>') != -1) { 

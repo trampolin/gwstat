@@ -16,5 +16,13 @@ function highscoreMenu() {
 <?php
 }
 
+function planetenMenu() {
+?>
+	<div class="contentitem round" id="submenu">
+		<h3><a href="?action=planeten">Planeten eintragen</a> | <a href="?action=planeten_auswertung">Auswertung</a></h3>
+	</div>
+<?php
+}
+
 
 ?>

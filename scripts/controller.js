@@ -157,3 +157,19 @@ function requestAvgFarmPerPlanet(aContainer) {
 	};
 	requestInterface("FarmInterface","getAveragePerFarm",undefined,requestAvgFarmPerPlanetCallback,undefined);
 }
+
+function requestAllPlanets(aContainer) {
+	var requestAllPlanetsCallback = function(response) {
+		if (checkResult(response)) 
+		{
+			$("#"+aContainer).html(response.data);
+			$('#'+aContainer).slideDown();
+			$('#toggle'+aContainer).text('verstecken');
+		}
+		else
+		{
+			showNotification(response.message,'bad');
+		}
+	};
+	requestInterface("PlanetInterface","getAllPlanets",undefined,requestAllPlanetsCallback,undefined);
+}
