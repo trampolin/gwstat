@@ -39,7 +39,7 @@
 					<a href="?action=farmen"><div class="navigationitem round">Farmen</div></a>
 					<!--a href="?action=auswertung"><div class="navigationitem round">Alles</div></a-->
 					<a href="?action=highscore"><div class="navigationitem round">Highscore</div></a>
-					<a href="?action=planeten_auswertung"><div class="navigationitem round">Planeten</div></a>
+					<a href="?action=planeten"><div class="navigationitem round">Planeten</div></a>
 				</div>
 		<?php } ?>
 		<div id="content" class="round innerfull">
