@@ -9,13 +9,16 @@
 	
 	echo '<p>'.$mode.'-modus</p>';
 	
+
+	
 	$spieler = '';
 	
 	// /Sonnensystem\s([0-9]+):([0-9]+)/
 	
 	if (($pw == 'supergeil') && ($msg != null)) 
 	{
-	
+		$msg = str_replace('\\"','"',$msg);
+		
 		$returnValue = preg_match_all("/Sonnensystem\s([0-9]+):([0-9]+)/",$msg,$ausgabe);
 		if ($returnValue > 0)
 		{
@@ -45,12 +48,11 @@
 		{
 			if ($mode == 'text') 
 			{
-				$returnValue = preg_match_all("/([0-9]+):([0-9]+):([0-9]+)\s+([a-zA-Z0-9\-_]+)/",$msg,$ausgabe);
+				$returnValue = preg_match_all("/([0-9]+):([0-9]+):([0-9]+)\s+([a-zA-Z0-9\-_\?\.\+äöü \*\+]+)/",$msg,$ausgabe);
 			}
 			else
 			{
-				$msg = str_replace('\\"','"',$msg);
-				$returnValue = preg_match_all("/<th><a href=.galaxie.php.to.[0-9]+:[0-9]+.>([0-9]+):([0-9]+):([0-9]+)<\/a><\/th>\s+<th>([a-zA-Z\-\._0-9]+)</",$msg,$ausgabe);
+				$returnValue = preg_match_all("/<th><a href=.galaxie.php.to.[0-9]+:[0-9]+.>([0-9]+):([0-9]+):([0-9]+)<\/a><\/th>\s+<th>([a-zA-Z0-9\-_\?\.\+äöü \*\+]+)</",$msg,$ausgabe);
 			}
 			
 			echo '<p>Anzahl der Einträge: '.$returnValue.'</p>';
@@ -77,12 +79,11 @@
 		{
 			if ($mode == 'text')
 			{
-				$returnValue = preg_match_all("/([0-9]+)\s([a-zA-Z0-9\-_\. ]*)\s([a-zA-Z0-9\-_\.]+)\s\[?([a-zA-Z0-9\-_\.]+|\-)\]?\s[0-9]+/",$msg,$ausgabe);
+				$returnValue = preg_match_all("/([0-9]+)\s([a-zA-Z0-9\-_\. äöü\?\*\+]*)\s([a-zA-Z0-9\-_\.äöü\?\*\+]+)\s\[?([a-zA-Z0-9\-_\.äöü\?\*\+]+|\-)\]?\s[0-9]+/",$msg,$ausgabe);
 			}
 			else
 			{
-				$msg = str_replace('\\"','"',$msg);
-				$returnValue = preg_match_all('/>([0-9]+)<\/th>\s+<th>([a-zA-Z0-9\-_\. ]*)<\/th>\s+<th>\s+<a href=.playercard\.php.u=[a-zA-Z0-9\-_]+&p=[0-9]+:[0-9]+:[0-9]+:1">([a-zA-Z0-9\-_\.]+)<\/a>/',$msg,$ausgabe);
+				$returnValue = preg_match_all('/>([0-9]+)<\/th>\s+<th>([a-zA-Z0-9\-_\. äöü\?\*\+]*)<\/th>\s+<th>\s+<a href=.playercard\.php.u=[a-zA-Z0-9\-_]+&p=[0-9]+:[0-9]+:[0-9]+:1">([a-zA-Z0-9\-_\.äöü\?\*\+]+)<\/a>/',$msg,$ausgabe);
 			}
 			echo '<p>Anzahl der Einträge: '.$returnValue.'</p>';
 			$db = new DatabaseConnection();
