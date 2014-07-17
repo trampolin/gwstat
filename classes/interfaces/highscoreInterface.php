@@ -5,7 +5,7 @@
 		else
 		{
 			$html .= '<tr><td colspan="8">Nicht genug Daten gesammelt!</td></tr>';
-		}		$html .= '</table>';				return new DataResponse(ResultTypes::resultOK,"getCompleteHighscore",$html);	}
+		}		$html .= '</table>';				$resultData = new stdClass;		$resultData->html = $html;				return new DataResponse(ResultTypes::resultOK,"getCompleteHighscore",$resultData);	}
 	
 	public function getActiveHighscore($data) 
 	{
@@ -42,7 +42,7 @@
 			$html .= '<tr><td colspan="5">Nicht genug Daten gesammelt!</td></tr>';
 		}
 		
-		$html .= '</table>';
+		$html .= '</table>';				$resultData = new stdClass;		$resultData->html = $html;
 		
-		return new DataResponse(ResultTypes::resultOK,"getActiveHighscore",$html);
+		return new DataResponse(ResultTypes::resultOK,"getActiveHighscore",$resultData);
 	}	}HighscoreInterface::registerInterface();?>

@@ -140,7 +140,7 @@ body {
 	display: none;
 	width: 64px;
 	height: 64px;
-	background-image: url("images/throbber.png");
+	/*background-image: url("images/throbber.png");*/
 }
 
 div.jGrowl div.good {
@@ -156,4 +156,13 @@ div.jGrowl div.bad {
 div.jGrowl div.debug {
 	background-color: 		#FFbb88;
 	color: 							navy;
+}
+
+
+.details {
+	width: 16px;
+	height: 16px;
+	background-image: url("images/details.png");
+	float: left;
+	margin-left: 4px;
 }

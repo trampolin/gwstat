@@ -27,6 +27,7 @@
 <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
 <script src="scripts/jquery.blockUI.js" type="text/javascript"></script>
 <script src="scripts/jquery.jgrowl.js" type="text/javascript"></script>
+<script src="scripts/jquery.bpopup.min.js" type="text/javascript"></script>
 <script src="scripts/functions.js" type="text/javascript"></script>
 <script src="scripts/controller.js" type="text/javascript"></script>
 </head>
@@ -86,6 +87,7 @@
 				<?php } else {
 						include("views/login.php");
 				}
+				messageBoxContainer();
 			?>
 		<br/>
 		</div>

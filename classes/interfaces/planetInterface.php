@@ -5,4 +5,4 @@
 		else
 		{
 			$html .= '<tr><td colspan="3">Nicht genug Daten gesammelt!</td></tr>';
-		}		$html .= '</table>';				return new DataResponse(ResultTypes::resultOK,"getAllPlanets",$html);	}	}PlanetInterface::registerInterface();?>
+		}		$html .= '</table>';				$resultData = new stdClass;		$resultData->html = $html;				return new DataResponse(ResultTypes::resultOK,"getAllPlanets",$resultData);	}	}PlanetInterface::registerInterface();?>

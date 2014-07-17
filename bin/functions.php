@@ -24,5 +24,10 @@ function planetenMenu() {
 <?php
 }
 
+function messageBoxContainer() {
+?>
+	<div class="contentitem round hidden" id="messageboxcontainer"></div>
+<?php
+}
 
 ?>

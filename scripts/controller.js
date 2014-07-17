@@ -66,7 +66,7 @@ function requestCompleteHighscore(aContainer) {
 	var requestCompleteHighscoreCallback = function(response) {
 		if (checkResult(response)) 
 		{
-			$("#"+aContainer).html(response.data);
+			$("#"+aContainer).html(response.data.html);
 			$('#'+aContainer).slideDown();
 			$('#toggle'+aContainer).text('verstecken');
 		}
@@ -82,7 +82,7 @@ function requestActiveHighscore(aContainer) {
 	var requestActiveHighscoreCallback = function(response) {
 		if (checkResult(response)) 
 		{
-			$("#"+aContainer).html(response.data);
+			$("#"+aContainer).html(response.data.html);
 			$('#'+aContainer).slideDown();
 			$('#toggle'+aContainer).text('verstecken');
 		}
@@ -98,7 +98,7 @@ function requestFarmPerDay(aContainer) {
 	var requestFarmPerDayCallback = function(response) {
 		if (checkResult(response)) 
 		{
-			$("#"+aContainer).html(response.data);
+			$("#"+aContainer).html(response.data.html);
 			$('#'+aContainer).slideDown();
 			$('#toggle'+aContainer).text('verstecken');
 		}
@@ -114,7 +114,7 @@ function requestFarmPerOwnPlanet(aContainer) {
 	var requestFarmPerOwnPlanetCallback = function(response) {
 		if (checkResult(response)) 
 		{
-			$("#"+aContainer).html(response.data);
+			$("#"+aContainer).html(response.data.html);
 			$('#'+aContainer).slideDown();
 			$('#toggle'+aContainer).text('verstecken');
 		}
@@ -130,7 +130,7 @@ function requestFarmPerPlanet(aContainer) {
 	var requestFarmPerPlanetCallback = function(response) {
 		if (checkResult(response)) 
 		{
-			$("#"+aContainer).html(response.data);
+			$("#"+aContainer).html(response.data.html);
 			$('#'+aContainer).slideDown();
 			$('#toggle'+aContainer).text('verstecken');
 		}
@@ -146,7 +146,7 @@ function requestAvgFarmPerPlanet(aContainer) {
 	var requestAvgFarmPerPlanetCallback = function(response) {
 		if (checkResult(response)) 
 		{
-			$("#"+aContainer).html(response.data);
+			$("#"+aContainer).html(response.data.html);
 			$('#'+aContainer).slideDown();
 			$('#toggle'+aContainer).text('verstecken');
 		}
@@ -162,7 +162,7 @@ function requestAllPlanets(aContainer) {
 	var requestAllPlanetsCallback = function(response) {
 		if (checkResult(response)) 
 		{
-			$("#"+aContainer).html(response.data);
+			$("#"+aContainer).html(response.data.html);
 			$('#'+aContainer).slideDown();
 			$('#toggle'+aContainer).text('verstecken');
 		}
@@ -172,4 +172,27 @@ function requestAllPlanets(aContainer) {
 		}
 	};
 	requestInterface("PlanetInterface","getAllPlanets",undefined,requestAllPlanetsCallback,undefined);
+}
+
+function ajaxMessageBox(aInterface,aFunction,aData) {
+	var ajaxMessageBoxCallback = function(response) {
+		if (checkResult(response)) 
+		{
+			if (response.data.title != undefined && response.data.title != null)
+			{
+				$("#messageboxcontainer").html("<p>"+response.data.title+"</p>");
+			}
+			else
+			{
+				$("#messageboxcontainer").html("<p></p>");
+			}
+			$("#messageboxcontainer").append(response.data.html);
+			$("#messageboxcontainer").bPopup();
+		}
+		else
+		{
+			showNotification(response.message,'bad');
+		}
+	};
+	requestInterface(aInterface,aFunction,aData,ajaxMessageBoxCallback,undefined)
 }
