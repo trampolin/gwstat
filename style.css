@@ -159,10 +159,21 @@ div.jGrowl div.debug {
 }
 
 
-.details {
+.icon {
 	width: 16px;
 	height: 16px;
-	background-image: url("images/details.png");
-	float: left;
+	float: right;
 	margin-left: 4px;
+}
+
+.icon:hover {
+	cursor: pointer;
+}
+
+.details {
+	background-image: url("images/details.png");
+}
+
+.planet {
+	background-image: url("images/planet.png");
 }
