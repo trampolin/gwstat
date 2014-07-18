@@ -126,7 +126,7 @@ function requestFarmPerOwnPlanet(aContainer) {
 	requestInterface("FarmInterface","getCompleteFarmPerOwnPlanet",undefined,requestFarmPerOwnPlanetCallback,undefined);
 }
 
-function requestFarmPerPlanet(aContainer) {
+function requestFarmPerPlanet(aContainer,aFilter) {
 	var requestFarmPerPlanetCallback = function(response) {
 		if (checkResult(response)) 
 		{
@@ -139,10 +139,10 @@ function requestFarmPerPlanet(aContainer) {
 			showNotification(response.message,'bad');
 		}
 	};
-	requestInterface("FarmInterface","getCompletePerFarm",undefined,requestFarmPerPlanetCallback,undefined);
+	requestInterface("FarmInterface","getCompletePerFarm",aFilter,requestFarmPerPlanetCallback,undefined);
 }
 
-function requestAvgFarmPerPlanet(aContainer) {
+function requestAvgFarmPerPlanet(aContainer,aFilter) {
 	var requestAvgFarmPerPlanetCallback = function(response) {
 		if (checkResult(response)) 
 		{
@@ -155,10 +155,10 @@ function requestAvgFarmPerPlanet(aContainer) {
 			showNotification(response.message,'bad');
 		}
 	};
-	requestInterface("FarmInterface","getAveragePerFarm",undefined,requestAvgFarmPerPlanetCallback,undefined);
+	requestInterface("FarmInterface","getAveragePerFarm",aFilter,requestAvgFarmPerPlanetCallback,undefined);
 }
 
-function requestAllPlanets(aContainer) {
+function requestAllPlanets(aContainer,aFilter) {
 	var requestAllPlanetsCallback = function(response) {
 		if (checkResult(response)) 
 		{
@@ -171,7 +171,7 @@ function requestAllPlanets(aContainer) {
 			showNotification(response.message,'bad');
 		}
 	};
-	requestInterface("PlanetInterface","getAllPlanets",undefined,requestAllPlanetsCallback,undefined);
+	requestInterface("PlanetInterface","getAllPlanets",aFilter,requestAllPlanetsCallback,undefined);
 }
 
 function ajaxMessageBox(aInterface,aFunction,aData) {

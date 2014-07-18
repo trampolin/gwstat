@@ -162,7 +162,6 @@ div.jGrowl div.debug {
 .icon {
 	width: 16px;
 	height: 16px;
-	float: right;
 	margin-left: 4px;
 }
 
@@ -172,8 +171,14 @@ div.jGrowl div.debug {
 
 .details {
 	background-image: url("images/details.png");
+	float: right;
 }
 
 .planet {
 	background-image: url("images/planet.png");
+	float: right;
+}
+
+.refresh {
+	background-image: url("images/refresh.png");
 }

@@ -1,5 +1,13 @@
 <?php
 
+function regExSpielerName() {
+	return "[\S]{1,50}";
+}
+
+function regExAllyName() {
+	return "[\S ]{1,50}";
+}
+
 function farmMenu() {
 ?>
 	<div class="contentitem round" id="submenu">

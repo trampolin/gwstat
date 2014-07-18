@@ -12,12 +12,12 @@
 	if (($pw == 'supergeil') && ($msg != null)) {
 	
 		if ($mode == 'text') {
-			$returnValue = preg_match_all("/([0-9]+)\s.+[\s]+()([a-zA-Z0-9\-_]+)\s*(\[[a-zA-Z0-9\-_\.]+\])?\s+([0-9\.]+)\s+([0-9\.]+)\s+([0-9\.]+)\s+([0-9]+)/",$msg,$ausgabe);
+			$returnValue = preg_match_all("/([0-9]+)\s...[0-9]*\s()([\S]+)\s(?:\s\[([\S ]+)\]\s|)([0-9\.]{1,10})\s([0-9\.]{1,10})\s([0-9\.]{1,10})\s([0-9\.]{1,2})/i",$msg,$ausgabe);
 		}
 		else
 		{
 			$msg = str_replace('\\"','"',$msg);
-			$returnValue = preg_match_all('/<tr class="(?:\s*|\s+ally\s+|own\s+)">\s+<th>([0-9]+)\s+(?:<span class="[a-z]+"><small>&[a-z]+;[0-9]+<\/small><\/span>|&bull;)\s+<\/th>\s+<th>\s+<a href="playercard\.php\?u=([a-zA-Z0-9\-_\.]+)">([a-zA-Z0-9_\-\.]+)<\/a>\s+(?:&nbsp;\[<a href="allianzen\.php\?ally=[a-zA-Z0-9\-_\.]+">([a-zA-Z0-9\-_\.]+)<\/a>\])?<\/th>\s+<th>([0-9\.]+)<\/th>\s+<th>([0-9\.]+)<\/th>\s+<th>([0-9\.]+)<\/th>\s+<th>([0-9\.]+)<\/th>/',$msg,$ausgabe);
+			$returnValue = preg_match_all('/<tr class="(?:\s*|\s+ally\s+|own\s+)">\s+<th>([0-9]+)\s+(?:<span class="[a-z]+"><small>&[a-z]+;[0-9]+<\/small><\/span>|&bull;)\s+<\/th>\s+<th>\s+<a href="playercard\.php\?u=([\S]{1,20})">([\S]{1,50})<\/a>\s+(?:&nbsp;\[<a href="allianzen\.php\?ally=[a-zA-Z0-9\-_\.]+">([\S ]{1,50})<\/a>\])?<\/th>\s+<th>([0-9\.]+)<\/th>\s+<th>([0-9\.]+)<\/th>\s+<th>([0-9\.]+)<\/th>\s+<th>([0-9\.]+)<\/th>/',$msg,$ausgabe);
 		}
 		
 		///// 
