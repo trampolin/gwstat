@@ -22,6 +22,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="jquery.jgrowl.css">
+<link rel="stylesheet" type="text/css" href="jquery.jqplot.min.css">
 <title>GW STATS</title>
 <script src="scripts/jquery-2.1.0.js" type="text/javascript"></script> 
 <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
@@ -30,6 +31,12 @@
 <script src="scripts/jquery.bpopup.min.js" type="text/javascript"></script>
 <script src="scripts/functions.js" type="text/javascript"></script>
 <script src="scripts/controller.js" type="text/javascript"></script>
+<script src="scripts/jquery.jqplot.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="scripts/plugins/jqplot.highlighter.min.js"></script>
+<script type="text/javascript" src="scripts/plugins/jqplot.cursor.min.js"></script>
+<script type="text/javascript" src="scripts/plugins/jqplot.dateAxisRenderer.min.js"></script>
+<script type="text/javascript" src="scripts/plugins/jqplot.pointLabels.min.js"></script>
 </head>
 <body>
 	<div id="everything" class="round fullwidth">
@@ -38,9 +45,9 @@
 			if ($login->isUserLoggedIn() == true) { ?>
 				<div id="navigation" class="round innerfull bigfont">
 					<a href="?action=farmen"><div class="navigationitem round">Farmen</div></a>
-					<!--a href="?action=auswertung"><div class="navigationitem round">Alles</div></a-->
 					<a href="?action=highscore"><div class="navigationitem round">Highscore</div></a>
 					<a href="?action=planeten"><div class="navigationitem round">Planeten</div></a>
+					<a href="?action=kampfberichte"><div class="navigationitem round">Kampf</div></a>
 				</div>
 		<?php } ?>
 		<div id="content" class="round innerfull">
@@ -65,6 +72,12 @@
 									break;
 								case "planeten":
 									include("views/planeten.php");
+									break;
+								case "kampfberichte":
+									include("views/kampfberichte.php");
+									break;
+								case "kampfberichte_auswertung":
+									include("views/kampfberichte_auswertung.php");
 									break;
 								case null:
 									include("views/farmen.php");

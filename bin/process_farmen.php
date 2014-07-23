@@ -49,7 +49,6 @@
 		{
 			$date = substr($ausgabe[1][$i],6,4).'-'.substr($ausgabe[1][$i],3,2).'-'.substr($ausgabe[1][$i],0,2).' '.$ausgabe[2][$i];
 		
-			//echo '<p>'.$date.'</p>';
 			$q = "INSERT INTO farmberichte VALUES".
 			"(".
 				$ausgabe[6][$i].",".

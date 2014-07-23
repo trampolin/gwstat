@@ -182,3 +182,15 @@ div.jGrowl div.debug {
 .refresh {
 	background-image: url("images/refresh.png");
 }
+
+.highscorev{
+	background-image: url("images/highscore.png");
+	float: right;
+}
+
+
+#highscoreverlauf {
+	width: 800px;
+	height: 300px;
+	margin: auto;
+}

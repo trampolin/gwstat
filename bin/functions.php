@@ -8,6 +8,14 @@ function regExAllyName() {
 	return "[\S ]{1,50}";
 }
 
+function kampfMenu() {
+?>
+	<div class="contentitem round" id="submenu">
+		<h3><a href="?action=kampfberichte">Kampfbericht eintragen</a> | <a href="?action=kampfberichte_auswertung">Auswertung</a></h3>
+	</div>
+<?php
+}
+
 function farmMenu() {
 ?>
 	<div class="contentitem round" id="submenu">

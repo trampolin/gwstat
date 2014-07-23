@@ -8,6 +8,7 @@ require_once(ROOT_DIR."/classes/interfaces/basicInterface.php");
 require_once(ROOT_DIR."/classes/interfaces/highscoreInterface.php");
 require_once(ROOT_DIR."/classes/interfaces/farmInterface.php");
 require_once(ROOT_DIR."/classes/interfaces/planetInterface.php");
+require_once(ROOT_DIR."/classes/interfaces/kampfberichtInterface.php");
 
 
 function handleRequest() {

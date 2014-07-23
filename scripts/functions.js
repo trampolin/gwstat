@@ -4,7 +4,7 @@ $(function() {
 		
 		$.ajax({
 			type: "POST",
-			url: "bin/ausgabe.php",
+			url: "bin/process_farmen.php",
 			data: { msg: message, password: 'supergeil'},
 			success: function(data) {
 				showNotification(data,'good');
@@ -46,6 +46,24 @@ $(function() {
 				showNotification(data,'good');
 				$("#planetenergebnis").html('<p>Ergebnis</p>'+data);
 				$('#msg_planeten').val("");
+			}
+		});
+		return false;
+  });
+});
+
+$(function() {
+  $("#submit_kampfberichte").click(function() {
+		var message = $("#msg_kampfberichte").val();
+		
+		$.ajax({
+			type: "POST",
+			url: "bin/process_kampfberichte.php",
+			data: { msg: message, password: 'supergeil', mode:'text'},
+			success: function(data) {
+				showNotification(data,'good');
+				$("#kampfberichteergebnis").html('<p>Ergebnis</p>'+data);
+				$('#msg_kampfberichte').val("");
 			}
 		});
 		return false;
