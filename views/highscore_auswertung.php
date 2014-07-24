@@ -4,15 +4,18 @@ if (isset($login)) {
 	if ($login->isUserLoggedIn() == true) {
 		highscoreMenu();
 		?>
-		<div class="contentitem round">
+		<!--div class="contentitem round">
 			<p>Aktive Spieler <a href="#" id="toggleactivehighscore">anzeigen</a></p>
 			<div id="activehighscore" class="hidden">
 				<p>Loading...</p>
 			</div>
-		</div>
+		</div-->
 		
 		<div class="contentitem round">
 			<p>Komplette Highscore <a href="#" id="togglecompletehighscore">anzeigen</a></p>
+			<p>Name <input name="completehighscore_filter_name" label="Name" type="text" id="completehighscore_filter_name" size="20" maxlength="50"> | Allianz 
+				<input name="completehighscore_filter_allianz" label="Allianz" type="text" id="completehighscore_filter_allianz" size="20" maxlength="50">
+				<img src="images/refresh.png" class="icon" id="completehighscore_refresh"/>
 			<div id="completehighscore" class="hidden">
 				<p>Loading...</p>
 			</div>
@@ -28,7 +31,13 @@ if (isset($login)) {
 ?>
 	<script type="text/javascript">
 	$(function() {
-		makeToggleAble('togglecompletehighscore','completehighscore',function() { requestCompleteHighscore('completehighscore'); });
-		makeToggleAble('toggleactivehighscore','activehighscore',function() { requestActiveHighscore('activehighscore'); });
+		makeToggleAble('togglecompletehighscore','completehighscore',function() { requestCompleteHighscore('completehighscore', {player: ($('#completehighscore_filter_name').val() != '' ? $('#completehighscore_filter_name').val() : undefined), ally: ($('#completehighscore_filter_allianz').val() != '' ? $('#completehighscore_filter_allianz').val() : undefined)}); });
+		
+		$('#completehighscore_filter_name').keyup(function(e) {if(e.keyCode == 13) {requestCompleteHighscore('completehighscore', {player: ($('#completehighscore_filter_name').val() != '' ? $('#completehighscore_filter_name').val() : undefined), ally: ($('#completehighscore_filter_allianz').val() != '' ? $('#completehighscore_filter_allianz').val() : undefined)});}});
+		$('#completehighscore_filter_allianz').keyup(function(e) {if(e.keyCode == 13) {requestCompleteHighscore('completehighscore', {player: ($('#completehighscore_filter_name').val() != '' ? $('#completehighscore_filter_name').val() : undefined), ally: ($('#completehighscore_filter_allianz').val() != '' ? $('#completehighscore_filter_allianz').val() : undefined)});}});
+		$('#completehighscore_refresh').click(function () {requestCompleteHighscore('completehighscore', {player: ($('#completehighscore_filter_name').val() != '' ? $('#completehighscore_filter_name').val() : undefined), ally: ($('#completehighscore_filter_allianz').val() != '' ? $('#completehighscore_filter_allianz').val() : undefined)});});
+
+		
+		//makeToggleAble('toggleactivehighscore','activehighscore',function() { requestActiveHighscore('activehighscore'); });
 	});
 	</script>

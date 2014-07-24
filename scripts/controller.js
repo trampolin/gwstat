@@ -62,7 +62,7 @@ function requestInterface(aInterface,aFunction,aData,aSuccess,aFail) {
 		) 
 }
 
-function requestCompleteHighscore(aContainer) {
+function requestCompleteHighscore(aContainer,aFilter) {
 	var requestCompleteHighscoreCallback = function(response) {
 		if (checkResult(response)) 
 		{
@@ -75,7 +75,7 @@ function requestCompleteHighscore(aContainer) {
 			showNotification(response.message,'bad');
 		}
 	};
-	requestInterface("HighscoreInterface","getCompleteHighscore",undefined,requestCompleteHighscoreCallback,undefined);
+	requestInterface("HighscoreInterface","getCompleteHighscore",aFilter,requestCompleteHighscoreCallback,undefined);
 }
 
 function requestActiveHighscore(aContainer) {
@@ -172,6 +172,54 @@ function requestAllPlanets(aContainer,aFilter) {
 		}
 	};
 	requestInterface("PlanetInterface","getAllPlanets",aFilter,requestAllPlanetsCallback,undefined);
+}
+
+function requestPlanetDistribution(aContainer,aFilter) {
+	var requestPlanetDistributionCallback = function(response) {
+		if (checkResult(response)) 
+		{
+			$("#"+aContainer).html(response.data.html);
+			$('#'+aContainer).slideDown();
+			$('#toggle'+aContainer).text('verstecken');
+			
+			if (response.data.planetenverteilung != undefined && response.data.planetenverteilung != null)
+			{
+				var plotPlanetenVerteilung = $.jqplot('planetenverteilung', [response.data.planetenverteilung], {
+					title:'Verteilung der Planeten',
+					seriesDefaults: { 
+						pointLabels: { show:true } 
+					},
+					axes:{
+						xaxis:{
+							renderer:$.jqplot.LinearAxisRenderer,
+							min: 0,
+							max: 300,
+							numberTicks: 21
+						},
+						yaxis:{
+							renderer:$.jqplot.LinearAxisRenderer,
+							min: 0,
+							max: 2000,
+						}
+					},
+					highlighter: {
+						show: true,
+						sizeAdjust: 7.5
+					},
+					cursor:{ 
+						show: true,
+						zoom:true, 
+						showTooltip:false
+					} 
+				});
+			}
+		}
+		else
+		{
+			showNotification(response.message,'bad');
+		}
+	};
+	requestInterface("PlanetInterface","getPlanetOverview",aFilter,requestPlanetDistributionCallback,undefined);
 }
 
 function requestAllKampfberichte(aContainer,aFilter) {

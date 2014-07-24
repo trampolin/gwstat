@@ -4,6 +4,14 @@ if (isset($login)) {
 	if ($login->isUserLoggedIn() == true) {
 		planetenMenu();
 		?>
+		
+		<div class="contentitem round">
+			<p>Planetenverteilung <a href="#" id="toggleplanetdistribution">anzeigen</a></p>
+			<div id="planetdistribution" class="hidden">
+				<p>Loading...</p>
+			</div>
+		</div>
+		
 		<div class="contentitem round">
 			<p>Alle Planeten <a href="#" id="toggleallplanets">anzeigen</a></p>
 			<p><input name="filter_galaxy" label="Galaxie" type="number" id="filter_galaxy" size="3" maxlength="3"> : 
@@ -28,6 +36,9 @@ else
 <script type="text/javascript">
 $(function() {
 	makeToggleAble('toggleallplanets','allplanets',function() { requestAllPlanets('allplanets', {galaxy: $('#filter_galaxy').val(), system: $('#filter_system').val()}); });
+	
+	makeToggleAble('toggleplanetdistribution','planetdistribution',function() { requestPlanetDistribution('planetdistribution') });
+	
 	$('#filter_galaxy').focus();
 	$('#filter_system').keyup(function(e) {if(e.keyCode == 13) {requestAllPlanets('allplanets', {galaxy: $('#filter_galaxy').val(), system: $('#filter_system').val()});}});
 	$('#filter_galaxy').keyup(function(e) {if(e.keyCode == 13) {requestAllPlanets('allplanets', {galaxy: $('#filter_galaxy').val(), system: $('#filter_system').val()});}});
