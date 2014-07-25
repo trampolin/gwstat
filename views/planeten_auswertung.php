@@ -17,6 +17,7 @@ if (isset($login)) {
 			<p><input name="filter_galaxy" label="Galaxie" type="number" id="filter_galaxy" size="3" maxlength="3"> : 
 				<input name="filter_system" label="System" type="number" id="filter_system" size="3" maxlength="3">
 				<img src="images/refresh.png" class="icon" id="refresh_allplanets"/>
+				<img title="Favoriten anzeigen" src="images/star_y.png" class="icon" id="allplanets_favorit"/>
 			</p>
 			<div id="allplanets" class="hidden">
 				<p>Loading...</p>
@@ -43,5 +44,6 @@ $(function() {
 	$('#filter_system').keyup(function(e) {if(e.keyCode == 13) {requestAllPlanets('allplanets', {galaxy: $('#filter_galaxy').val(), system: $('#filter_system').val()});}});
 	$('#filter_galaxy').keyup(function(e) {if(e.keyCode == 13) {requestAllPlanets('allplanets', {galaxy: $('#filter_galaxy').val(), system: $('#filter_system').val()});}});
 	$('#refresh_allplanets').click(function () {requestAllPlanets('allplanets', {galaxy: $('#filter_galaxy').val(), system: $('#filter_system').val()});});
+	$('#allplanets_favorit').click(function () {requestAllPlanets('allplanets', {favoriten: true});});
 });
 </script>
