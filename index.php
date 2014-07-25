@@ -48,6 +48,7 @@
 					<a href="?action=highscore"><div class="navigationitem round">Highscore</div></a>
 					<a href="?action=planeten"><div class="navigationitem round">Planeten</div></a>
 					<a href="?action=kampfberichte"><div class="navigationitem round">Kampf</div></a>
+					<a href="?action=tools"><div class="navigationitem round">Tools</div></a>
 				</div>
 		<?php } ?>
 		<div id="content" class="round innerfull">
@@ -78,6 +79,9 @@
 									break;
 								case "kampfberichte_auswertung":
 									include("views/kampfberichte_auswertung.php");
+									break;
+								case "tools":
+									include("views/tools.php");
 									break;
 								case null:
 									include("views/farmen.php");

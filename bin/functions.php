@@ -40,6 +40,14 @@ function planetenMenu() {
 <?php
 }
 
+function toolsMenu() {
+?>
+	<div class="contentitem round" id="submenu">
+		<h3><a href="?action=tools">Tools</a></h3>
+	</div>
+<?php
+}
+
 function messageBoxContainer() {
 ?>
 	<div class="contentitem round hidden" id="messageboxcontainer"></div>

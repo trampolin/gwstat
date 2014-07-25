@@ -94,6 +94,27 @@ function requestActiveHighscore(aContainer) {
 	requestInterface("HighscoreInterface","getActiveHighscore",undefined,requestActiveHighscoreCallback,undefined);
 }
 
+function requestToggleHighscore(aIconId,aFilter) {
+	var requestToggleHighscoreCallback = function(response) {
+		if (checkResult(response)) 
+		{
+			if (response.data.favorit == 1)
+			{
+				$('.'+aIconId).removeClass("addfavorit").addClass("removefavorit");
+			}
+			else
+			{
+				$('.'+aIconId).removeClass("removefavorit").addClass("addfavorit");
+			}
+		}
+		else
+		{
+			showNotification(response.message,'bad');
+		}
+	};
+	requestInterfaceCustomBlock("HighscoreInterface","toggleFavorit",aFilter,requestToggleHighscoreCallback,undefined,undefined,undefined);
+}
+
 function requestFarmPerDay(aContainer) {
 	var requestFarmPerDayCallback = function(response) {
 		if (checkResult(response)) 
@@ -254,7 +275,7 @@ function requestFarmPerDayKampf(aContainer) {
 	requestInterface("KampfberichtInterface","getCompleteFarmPerDay",undefined,requestFarmPerDayCallback,undefined);
 }
 
-function getMinMax(line)
+function getMinMax(line, offset)
 {
 	var minY = 10000000;
 	var maxY = 0;
@@ -269,6 +290,11 @@ function getMinMax(line)
 	{
 		maxY = maxY+20;
 		minY = minY-20;
+	}
+	else if (offset != undefined)
+	{
+		maxY = maxY+offset;
+		minY = minY-offset;
 	}
 	else
 	{
@@ -354,8 +380,51 @@ function ajaxMessageBox(aInterface,aFunction,aData) {
 				}
 				
 			}
-			
-			
+			else if (response.data.farmdata != undefined && response.data.farmdata != null)
+			{
+				var eisen = response.data.farmdata.eisen;
+				var silizium = response.data.farmdata.silizium;
+				var wasser = response.data.farmdata.wasser;
+				var wasserstoff = response.data.farmdata.wasserstoff;
+				
+				if (eisen.length > 0 || silizium.length > 0 || wasser.length > 0 || wasserstoff.length > 0)
+				{
+					var eisenminmax = getMinMax(eisen,0);
+					var siliziumminmax = getMinMax(silizium,0);
+					var wasserminmax = getMinMax(wasser,0);
+					var wasserstoffminmax = getMinMax(wasserstoff,0);
+					
+					var gesamtminmax = getMinMax([[0,eisenminmax.max],[0,siliziumminmax.max],[0,wasserminmax.max],[0,wasserstoffminmax.max]]);
+					
+					var plotFarm = $.jqplot('farmverlauf', [eisen,silizium,wasser,wasserstoff], {
+						title:'Farmertr&auml;ge',
+						seriesDefaults: { 
+							pointLabels: { show:true } 
+						},
+						axes:{
+							xaxis:{
+								renderer:$.jqplot.DateAxisRenderer,
+							},
+							yaxis:{
+								renderer:$.jqplot.LinearAxisRenderer,
+								min: (gesamtminmax.min > 0 ? gesamtminmax.min : 0),
+								max: gesamtminmax.max,
+								numberTicks: 5
+							}
+							
+						},
+						highlighter: {
+							show: true,
+							sizeAdjust: 7.5
+						},
+						cursor:{ 
+							show: true,
+							zoom:true, 
+							showTooltip:false
+						} 
+					});
+				}
+			}
 		}
 		else
 		{

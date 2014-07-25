@@ -188,6 +188,25 @@ div.jGrowl div.debug {
 	float: right;
 }
 
+.ally{
+	background-image: url("images/ally.png");
+	float: right;
+}
+
+.favorit {
+	background-image: url("images/star_y.png");
+}
+
+.removefavorit{
+	background-image: url("images/star_y.png");
+	float: right;
+}
+
+.addfavorit{
+	background-image: url("images/star_b.png");
+	float: right;
+}
+
 
 #highscoreverlauf {
 	width: 800px;
@@ -196,6 +215,12 @@ div.jGrowl div.debug {
 }
 
 #planetenverteilung {
+	width: 800px;
+	height: 300px;
+	margin: auto;
+}
+
+#farmverlauf {
 	width: 800px;
 	height: 300px;
 	margin: auto;
