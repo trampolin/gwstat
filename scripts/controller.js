@@ -94,6 +94,22 @@ function requestActiveHighscore(aContainer) {
 	requestInterface("HighscoreInterface","getActiveHighscore",undefined,requestActiveHighscoreCallback,undefined);
 }
 
+function requestInactiveHighscore(aContainer,aFilter) {
+	var requestInactiveHighscoreCallback = function(response) {
+		if (checkResult(response)) 
+		{
+			$("#"+aContainer).html(response.data.html);
+			$('#'+aContainer).slideDown();
+			$('#toggle'+aContainer).text('verstecken');
+		}
+		else
+		{
+			showNotification(response.message,'bad');
+		}
+	};
+	requestInterface("HighscoreInterface","getInactivePlayers",aFilter,requestInactiveHighscoreCallback,undefined);
+}
+
 function requestToggleHighscore(aIconId,aFilter) {
 	var requestToggleHighscoreCallback = function(response) {
 		if (checkResult(response)) 
