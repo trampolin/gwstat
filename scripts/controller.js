@@ -62,50 +62,37 @@ function requestInterface(aInterface,aFunction,aData,aSuccess,aFail) {
 		) 
 }
 
+function basicCallback(aContainer,response) {
+	if (checkResult(response)) 
+	{
+		$("#"+aContainer).html(response.data.html);
+		$('#'+aContainer).slideDown();
+		$('#toggle'+aContainer).text('verstecken');
+		$('#'+aContainer+" .auswertung").dataTable({"lengthMenu": [[50, 100, 200, 500, -1], [50, 100, 200, 500, "Alle"]]});
+	}
+	else
+	{
+		showNotification(response.message,'bad');
+	}
+}
+
 function requestCompleteHighscore(aContainer,aFilter) {
 	var requestCompleteHighscoreCallback = function(response) {
-		if (checkResult(response)) 
-		{
-			$("#"+aContainer).html(response.data.html);
-			$('#'+aContainer).slideDown();
-			$('#toggle'+aContainer).text('verstecken');
-		}
-		else
-		{
-			showNotification(response.message,'bad');
-		}
+		basicCallback(aContainer,response);
 	};
 	requestInterface("HighscoreInterface","getCompleteHighscore",aFilter,requestCompleteHighscoreCallback,undefined);
 }
 
 function requestActiveHighscore(aContainer) {
 	var requestActiveHighscoreCallback = function(response) {
-		if (checkResult(response)) 
-		{
-			$("#"+aContainer).html(response.data.html);
-			$('#'+aContainer).slideDown();
-			$('#toggle'+aContainer).text('verstecken');
-		}
-		else
-		{
-			showNotification(response.message,'bad');
-		}
+		basicCallback(aContainer,response);
 	};
 	requestInterface("HighscoreInterface","getActiveHighscore",undefined,requestActiveHighscoreCallback,undefined);
 }
 
 function requestInactiveHighscore(aContainer,aFilter) {
 	var requestInactiveHighscoreCallback = function(response) {
-		if (checkResult(response)) 
-		{
-			$("#"+aContainer).html(response.data.html);
-			$('#'+aContainer).slideDown();
-			$('#toggle'+aContainer).text('verstecken');
-		}
-		else
-		{
-			showNotification(response.message,'bad');
-		}
+		basicCallback(aContainer,response);
 	};
 	requestInterface("HighscoreInterface","getInactivePlayers",aFilter,requestInactiveHighscoreCallback,undefined);
 }
@@ -133,80 +120,35 @@ function requestToggleHighscore(aIconId,aFilter) {
 
 function requestFarmPerDay(aContainer) {
 	var requestFarmPerDayCallback = function(response) {
-		if (checkResult(response)) 
-		{
-			$("#"+aContainer).html(response.data.html);
-			$('#'+aContainer).slideDown();
-			$('#toggle'+aContainer).text('verstecken');
-		}
-		else
-		{
-			showNotification(response.message,'bad');
-		}
+		basicCallback(aContainer,response);
 	};
 	requestInterface("FarmInterface","getCompleteFarmPerDay",undefined,requestFarmPerDayCallback,undefined);
 }
 
 function requestFarmPerOwnPlanet(aContainer) {
 	var requestFarmPerOwnPlanetCallback = function(response) {
-		if (checkResult(response)) 
-		{
-			$("#"+aContainer).html(response.data.html);
-			$('#'+aContainer).slideDown();
-			$('#toggle'+aContainer).text('verstecken');
-		}
-		else
-		{
-			showNotification(response.message,'bad');
-		}
+		basicCallback(aContainer,response);
 	};
 	requestInterface("FarmInterface","getCompleteFarmPerOwnPlanet",undefined,requestFarmPerOwnPlanetCallback,undefined);
 }
 
 function requestFarmPerPlanet(aContainer,aFilter) {
 	var requestFarmPerPlanetCallback = function(response) {
-		if (checkResult(response)) 
-		{
-			$("#"+aContainer).html(response.data.html);
-			$('#'+aContainer).slideDown();
-			$('#toggle'+aContainer).text('verstecken');
-		}
-		else
-		{
-			showNotification(response.message,'bad');
-		}
+		basicCallback(aContainer,response);
 	};
 	requestInterface("FarmInterface","getCompletePerFarm",aFilter,requestFarmPerPlanetCallback,undefined);
 }
 
 function requestAvgFarmPerPlanet(aContainer,aFilter) {
 	var requestAvgFarmPerPlanetCallback = function(response) {
-		if (checkResult(response)) 
-		{
-			$("#"+aContainer).html(response.data.html);
-			$('#'+aContainer).slideDown();
-			$('#toggle'+aContainer).text('verstecken');
-		}
-		else
-		{
-			showNotification(response.message,'bad');
-		}
+		basicCallback(aContainer,response);
 	};
 	requestInterface("FarmInterface","getAveragePerFarm",aFilter,requestAvgFarmPerPlanetCallback,undefined);
 }
 
 function requestAllPlanets(aContainer,aFilter) {
 	var requestAllPlanetsCallback = function(response) {
-		if (checkResult(response)) 
-		{
-			$("#"+aContainer).html(response.data.html);
-			$('#'+aContainer).slideDown();
-			$('#toggle'+aContainer).text('verstecken');
-		}
-		else
-		{
-			showNotification(response.message,'bad');
-		}
+		basicCallback(aContainer,response);
 	};
 	requestInterface("PlanetInterface","getAllPlanets",aFilter,requestAllPlanetsCallback,undefined);
 }
@@ -261,16 +203,7 @@ function requestPlanetDistribution(aContainer,aFilter) {
 
 function requestAllKampfberichte(aContainer,aFilter) {
 	var requestAllPlanetsCallback = function(response) {
-		if (checkResult(response)) 
-		{
-			$("#"+aContainer).html(response.data.html);
-			$('#'+aContainer).slideDown();
-			$('#toggle'+aContainer).text('verstecken');
-		}
-		else
-		{
-			showNotification(response.message,'bad');
-		}
+		basicCallback(aContainer,response);
 	};
 	requestInterface("KampfberichtInterface","getAllKampfberichte",aFilter,requestAllPlanetsCallback,undefined);
 }
@@ -282,6 +215,7 @@ function requestFarmPerDayKampf(aContainer) {
 			$("#"+aContainer).html(response.data.html);
 			$('#'+aContainer).slideDown();
 			$('#toggle'+aContainer).text('verstecken');
+			$('#'+aContainer+" .auswertung").dataTable();
 		}
 		else
 		{
@@ -336,6 +270,7 @@ function ajaxMessageBox(aInterface,aFunction,aData) {
 			$("#messageboxcontainer").append(response.data.html);
 			
 			$("#messageboxcontainer").bPopup();
+			$("#messageboxcontainer .auswertung").dataTable();
 			
 			if (response.data.highscoredata != undefined && response.data.highscoredata != null)
 			{

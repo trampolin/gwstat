@@ -32,6 +32,7 @@
 <script src="scripts/functions.js" type="text/javascript"></script>
 <script src="scripts/controller.js" type="text/javascript"></script>
 <script src="scripts/jquery.jqplot.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.dataTables.min.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="scripts/plugins/jqplot.highlighter.min.js"></script>
 <script type="text/javascript" src="scripts/plugins/jqplot.cursor.min.js"></script>
