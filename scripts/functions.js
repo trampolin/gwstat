@@ -109,7 +109,11 @@ function checkResult(response) {
 
 jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "planet-pre": function ( a ) {
-        var m = a.split(":"), x = "";
+				var tmp = document.createElement("DIV");
+				tmp.innerHTML = a;
+				
+		
+        var m = tmp.textContent.split(":"), x = "";
  
         for(var i = 0; i < m.length; i++) {
             var item = m[i];
