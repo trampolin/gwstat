@@ -1,5 +1,7 @@
 var debug = true;
 
+var lengthMenu = [[50, 100, 200, 500, -1], [50, 100, 200, 500, "Alle"]];
+
 function requestInterfaceCustomBlock(aInterface,aFunction,aData,aSuccess,aFail,aBlock,aUnblock) {
 	var requestInterfaceFail = function(xhr,status,error) {
 		showNotification(xhr.responseText,'bad');
@@ -62,13 +64,13 @@ function requestInterface(aInterface,aFunction,aData,aSuccess,aFail) {
 		) 
 }
 
-function basicCallback(aContainer,response) {
+function basicCallback(aContainer,response,customtableoptions) {
 	if (checkResult(response)) 
 	{
 		$("#"+aContainer).html(response.data.html);
 		$('#'+aContainer).slideDown();
 		$('#toggle'+aContainer).text('verstecken');
-		$('#'+aContainer+" .auswertung").dataTable({"lengthMenu": [[50, 100, 200, 500, -1], [50, 100, 200, 500, "Alle"]]});
+		$('#'+aContainer+" .auswertung").dataTable((customtableoptions != undefined ? customtableoptions : {"lengthMenu": lengthMenu}));
 	}
 	else
 	{
@@ -92,7 +94,7 @@ function requestActiveHighscore(aContainer) {
 
 function requestInactiveHighscore(aContainer,aFilter) {
 	var requestInactiveHighscoreCallback = function(response) {
-		basicCallback(aContainer,response);
+		basicCallback(aContainer,response, {"lengthMenu": lengthMenu, "order": [[ 0, "desc" ]]});
 	};
 	requestInterface("HighscoreInterface","getInactivePlayers",aFilter,requestInactiveHighscoreCallback,undefined);
 }
@@ -269,8 +271,9 @@ function ajaxMessageBox(aInterface,aFunction,aData) {
 			}
 			$("#messageboxcontainer").append(response.data.html);
 			
-			$("#messageboxcontainer").bPopup();
-			$("#messageboxcontainer .auswertung").dataTable();
+			$("#messageboxcontainer").bPopup({follow: [false, false]});
+			
+			$("#messageboxcontainer .auswertung.dotable").dataTable({"lengthMenu" : lengthMenu});
 			
 			if (response.data.highscoredata != undefined && response.data.highscoredata != null)
 			{
@@ -382,5 +385,6 @@ function ajaxMessageBox(aInterface,aFunction,aData) {
 			showNotification(response.message,'bad');
 		}
 	};
+	aData.popup = true;
 	requestInterface(aInterface,aFunction,aData,ajaxMessageBoxCallback,undefined)
 }

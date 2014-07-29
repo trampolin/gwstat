@@ -23,13 +23,13 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="jquery.jgrowl.css">
 <link rel="stylesheet" type="text/css" href="jquery.jqplot.min.css">
+<link rel="stylesheet" type="text/css" href="jquery.dataTables.css">
 <title>GW STATS</title>
 <script src="scripts/jquery-2.1.0.js" type="text/javascript"></script> 
 <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
 <script src="scripts/jquery.blockUI.js" type="text/javascript"></script>
 <script src="scripts/jquery.jgrowl.js" type="text/javascript"></script>
 <script src="scripts/jquery.bpopup.min.js" type="text/javascript"></script>
-<script src="scripts/functions.js" type="text/javascript"></script>
 <script src="scripts/controller.js" type="text/javascript"></script>
 <script src="scripts/jquery.jqplot.min.js" type="text/javascript"></script>
 <script src="scripts/jquery.dataTables.min.js" type="text/javascript"></script>
@@ -38,6 +38,8 @@
 <script type="text/javascript" src="scripts/plugins/jqplot.cursor.min.js"></script>
 <script type="text/javascript" src="scripts/plugins/jqplot.dateAxisRenderer.min.js"></script>
 <script type="text/javascript" src="scripts/plugins/jqplot.pointLabels.min.js"></script>
+
+<script src="scripts/functions.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="everything" class="round fullwidth">

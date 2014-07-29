@@ -107,6 +107,44 @@ function checkResult(response) {
 
 }
 
+jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "planet-pre": function ( a ) {
+        var m = a.split(":"), x = "";
+ 
+        for(var i = 0; i < m.length; i++) {
+            var item = m[i];
+            if(item.length == 1) {
+                x += "00" + item;
+            } else if(item.length == 2) {
+                x += "0" + item;
+            } else {
+                x += item;
+            }
+        }
+ 
+        return x;
+    },
+ 
+    "planet-asc": function ( a, b ) {
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+    },
+ 
+    "planet-desc": function ( a, b ) {
+        return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+    }
+} );
+
+jQuery.fn.dataTableExt.aTypes.unshift(
+    function ( sData )
+    {
+        if (/Details: \d{1,3}:\d{1,3}:\d{1,3}/.test(sData)) {
+            return 'planet';
+        }
+        return null;
+    }
+);
+
+
 function submitForm(formclass, outputclass, adress) {
     $.ajax({type:'POST', url: adress, data:$('.'+formclass).serialize(), success: function(response) {
         $('.'+formclass).find('.'+outputclass).html(response);
