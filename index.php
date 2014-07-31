@@ -33,11 +33,13 @@
 <script src="scripts/controller.js" type="text/javascript"></script>
 <script src="scripts/jquery.jqplot.min.js" type="text/javascript"></script>
 <script src="scripts/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="scripts/scrippi.js" type="text/javascript"></script>
 
 <script type="text/javascript" src="scripts/plugins/jqplot.highlighter.min.js"></script>
 <script type="text/javascript" src="scripts/plugins/jqplot.cursor.min.js"></script>
 <script type="text/javascript" src="scripts/plugins/jqplot.dateAxisRenderer.min.js"></script>
 <script type="text/javascript" src="scripts/plugins/jqplot.pointLabels.min.js"></script>
+<script type="text/javascript" src="scripts/plugins/jqplot.barRenderer.min.js"></script>
 
 <script src="scripts/functions.js" type="text/javascript"></script>
 </head>

@@ -7,6 +7,8 @@ if (isset($login)) {
 		
 		<div class="contentitem round">
 			<p>Planetenverteilung <a href="#" id="toggleplanetdistribution">anzeigen</a></p>
+			<p><input name="overview_galaxy" label="Galaxie" type="number" id="overview_galaxy" size="3" maxlength="3">
+				<img src="images/refresh.png" class="icon" id="refresh_overview"/></p>
 			<div id="planetdistribution" class="hidden">
 				<p>Loading...</p>
 			</div>
@@ -38,7 +40,9 @@ else
 $(function() {
 	makeToggleAble('toggleallplanets','allplanets',function() { requestAllPlanets('allplanets', {galaxy: $('#filter_galaxy').val(), system: $('#filter_system').val()}); });
 	
-	makeToggleAble('toggleplanetdistribution','planetdistribution',function() { requestPlanetDistribution('planetdistribution') });
+	makeToggleAble('toggleplanetdistribution','planetdistribution',function() { requestPlanetDistribution('planetdistribution',{galaxy: $('#overview_galaxy').val()}); });
+	$('#refresh_overview').click(function () {requestPlanetDistribution('planetdistribution',{galaxy: $('#overview_galaxy').val()});});
+	$('#overview_galaxy').keyup(function(e) {if(e.keyCode == 13) {requestPlanetDistribution('planetdistribution',{galaxy: $('#overview_galaxy').val()});}});
 	
 	$('#filter_galaxy').focus();
 	$('#filter_system').keyup(function(e) {if(e.keyCode == 13) {requestAllPlanets('allplanets', {galaxy: $('#filter_galaxy').val(), system: $('#filter_system').val()});}});

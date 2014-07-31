@@ -166,9 +166,10 @@ function requestPlanetDistribution(aContainer,aFilter) {
 			if (response.data.planetenverteilung != undefined && response.data.planetenverteilung != null)
 			{
 				var plotPlanetenVerteilung = $.jqplot('planetenverteilung', [response.data.planetenverteilung], {
-					title:'Verteilung der Planeten',
-					seriesDefaults: { 
-						pointLabels: { show:true } 
+					title:'Verteilung'+(aFilter.galaxy != '' ? ' '+aFilter.galaxy : ' aller Planeten'),
+					seriesDefaults:{
+							renderer:$.jqplot.BarRenderer,
+							rendererOptions: {fillToZero: true}
 					},
 					axes:{
 						xaxis:{
@@ -180,7 +181,7 @@ function requestPlanetDistribution(aContainer,aFilter) {
 						yaxis:{
 							renderer:$.jqplot.LinearAxisRenderer,
 							min: 0,
-							max: 2000,
+							max: (aFilter.galaxy != '' ? 20 : 2000),
 						}
 					},
 					highlighter: {

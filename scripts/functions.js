@@ -111,8 +111,7 @@ jQuery.extend( jQuery.fn.dataTableExt.oSort, {
     "planet-pre": function ( a ) {
 				var tmp = document.createElement("DIV");
 				tmp.innerHTML = a;
-				
-		
+
         var m = tmp.textContent.split(":"), x = "";
  
         for(var i = 0; i < m.length; i++) {
@@ -154,4 +153,42 @@ function submitForm(formclass, outputclass, adress) {
         $('.'+formclass).find('.'+outputclass).html(response);
     }});
     return false;
+}
+
+function sendProbes(toc)
+{
+  /*
+  a=$('#fromG').val();
+  b=$('#fromS').val();
+  c=$('#fromP').val();   
+  
+  var arr = new Array();
+  
+   //koords
+  arr["fromc"] = $('#fromG').val()+":"+$('#fromS').val()+":"+$('#fromP').val()+":"+$('#fromT').val();
+  arr["toc"]  = toc;
+  arr["type"] = "sendprobes";
+  
+  var ajax = new Ajax();
+  
+  ajax.action = "http://uni1.gigrawars.de/ajax.php";
+  ajax.method = "post";
+  
+  ajax.createFormArray(arr);
+  
+  ajax.onready = function () {
+        var fleetCode = Number(this.response);
+        if(fleetCode == -100)
+        {
+            //success   
+						showNotification("Probe sent",'good');
+            
+        }else{
+            showNotification("Error: "+fleetCode,'bad');
+        }
+    };
+    
+    //clearInterval(timerTO);
+    ajax.run();
+		*/
 }
